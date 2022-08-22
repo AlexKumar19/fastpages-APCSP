@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Fastpages Notebook Blog Post",
-            "content": "Python . Using python to pring &quot;Hello&quot; . print(&#39;Hello world, this is Alex Kumar&#39;) .",
+            "content": "Python . Using python to pring &quot;Hello&quot; . print(&#39;Hello world, this is Alex Kumar&#39;) . Hello world, this is Alex Kumar .",
             "url": "https://alexkumar19.github.io/fastpages-APCSP/jupyter/2022/08/21/firstjuypternotebook.html",
             "relUrl": "/jupyter/2022/08/21/firstjuypternotebook.html",
             "date": " • Aug 21, 2022"
