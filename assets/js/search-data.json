@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Fastpages Notebook Blog Post",
-            "content": "Python . Using python to pring &quot;Hello&quot; . print(&#39;Hello world, this is Alex Kumar&#39;) . Hello world, this is Alex Kumar .",
+            "content": "Python . Using python to pring &quot;Hello&quot; . print(&#39;Hello world, this is Alex Kumar&#39;) . Hello world, this is Alex Kumar . info =&#39;I like to play basketball and I also enjoy going to the gym&#39; print(&quot;Here are some things about me: &quot; + info) . Here are some things about me:I like to play basketball and I also enjoy going to the gym .",
             "url": "https://alexkumar19.github.io/fastpages-APCSP/jupyter/2022/08/21/firstjuypternotebook.html",
             "relUrl": "/jupyter/2022/08/21/firstjuypternotebook.html",
             "date": " • Aug 21, 2022"
@@ -13,8 +13,8 @@
   
     
         ,"post1": {
-            "title": "Alex's test post",
-            "content": "Hello, my name is alex and this is a sample markdown post. .",
+            "title": "Alex's first blog post!",
+            "content": "Hello, my name is alex and this is a sample markdown post. I have many hobbies that I do in my free time: Playing basketball, track and field, going to the beach, and playing with my dog! .",
             "url": "https://alexkumar19.github.io/fastpages-APCSP/markdown/2022/08/20/Post.html",
             "relUrl": "/markdown/2022/08/20/Post.html",
             "date": " • Aug 20, 2022"
