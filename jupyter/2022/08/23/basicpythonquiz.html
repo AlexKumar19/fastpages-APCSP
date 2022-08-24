@@ -151,15 +151,30 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
+<span class="c1">#function that takes in the question and the answer, then it determines whether the input is correct or incorrect then changes the variable correct depending on the answer</span>
+<span class="k">def</span> <span class="nf">question</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
+    <span class="c1">#prints the question</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
+    <span class="c1">#takes in the input</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">msg</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
+    <span class="c1">#checks if the answer is correct or not</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
+        <span class="c1">#prints if the message is correct</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
+        <span class="c1">#changes the correct variable</span>
+        <span class="k">global</span> <span class="n">correct</span>
         <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1">#checks to see if its false</span>
     <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#prints out that the answer is false</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s2">" is incorrect!"</span><span class="p">)</span>
-<span class="n">question_with_response</span><span class="p">(</span><span class="s2">"test"</span><span class="p">,</span> <span class="s2">"true"</span><span class="p">)</span>
+<span class="c1">#Questions</span>
+<span class="n">question</span><span class="p">(</span><span class="s2">"What function woud you use to output text?"</span><span class="p">,</span> <span class="s2">"print"</span><span class="p">)</span>
+<span class="n">question</span><span class="p">(</span><span class="s2">"What function would you use to take input from the user?"</span><span class="p">,</span> <span class="s2">"input"</span><span class="p">)</span>
+<span class="n">question</span><span class="p">(</span><span class="s2">"What keyword do you use to define a function?"</span><span class="p">,</span> <span class="s2">"def"</span><span class="p">)</span>
+<span class="n">question</span><span class="p">(</span><span class="s2">"what function checks whether or not a certain condition is true or false?"</span><span class="p">,</span> <span class="s2">"if"</span><span class="p">)</span>
+<span class="n">Percentage</span> <span class="o">=</span> <span class="n">correct</span><span class="o">/</span><span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You got "</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">Percentage</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span><span class="o">+</span><span class="s2">"%"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -172,7 +187,13 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Question: test
+<pre>Question: What function woud you use to output text?
+input is incorrect!
+Question: What function would you use to take input from the user?
+afkdfkjsadhsd is incorrect!
+Question: What keyword do you use to define a function?
+def is correct!
+You got 33%
 </pre>
 </div>
 </div>
