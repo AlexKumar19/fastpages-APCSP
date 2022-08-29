@@ -10,4 +10,5 @@ This page contains my notes from all classes, I use this page to go back to lect
 
 | Date | subject | link |
 | -- | --|
+| 08/24/22 | CSP | [Blog post and Markdown]()
 | 08/25/22 | CSP | [Bash lecture](https://alexkumar19.github.io/fastpages-APCSP/markdown/csp/2022/08/25/NotesAPCSP-BashLecture.html) |
