@@ -173,10 +173,9 @@ window.onload = wrap_img;
         <span class="c1">#prints out that the answer is false</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s2">" is incorrect!"</span><span class="p">)</span>
 <span class="c1">#Questions</span>
-<span class="n">question</span><span class="p">(</span><span class="s2">"What function woud you use to output text?"</span><span class="p">,</span> <span class="s2">"print"</span><span class="p">)</span>
-<span class="n">question</span><span class="p">(</span><span class="s2">"What function would you use to take input from the user?"</span><span class="p">,</span> <span class="s2">"input"</span><span class="p">)</span>
-<span class="n">question</span><span class="p">(</span><span class="s2">"What keyword do you use to define a function?"</span><span class="p">,</span> <span class="s2">"def"</span><span class="p">)</span>
-<span class="n">question</span><span class="p">(</span><span class="s2">"what function checks whether or not a certain condition is true or false?"</span><span class="p">,</span> <span class="s2">"if"</span><span class="p">)</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">"What function woud you use to output text?"</span><span class="p">,</span><span class="s2">"print"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"What function would you use to take input from the user?"</span><span class="p">,</span><span class="s2">"input"</span><span class="p">),</span> <span class="p">(</span><span class="s2">"What keyword do you use to define a function?"</span><span class="p">,</span> <span class="s2">"def"</span><span class="p">),(</span><span class="s2">"what function checks whether or not a certain condition is true or false?"</span><span class="p">,</span> <span class="s2">"if"</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">questions</span><span class="p">:</span>
+    <span class="n">question</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">Percentage</span> <span class="o">=</span> <span class="n">correct</span><span class="o">/</span><span class="mi">4</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"You got "</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">Percentage</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span><span class="o">+</span><span class="s2">"%"</span><span class="p">)</span>
 </pre></div>
@@ -196,10 +195,10 @@ print is correct!
 Question: What function would you use to take input from the user?
 input is correct!
 Question: What keyword do you use to define a function?
-def is correct!
+if is incorrect!
 Question: what function checks whether or not a certain condition is true or false?
 if is correct!
-You got 100%
+You got 75%
 </pre>
 </div>
 </div>
