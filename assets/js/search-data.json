@@ -58,7 +58,7 @@
     
         ,"post5": {
             "title": "Blog Post Notes 08/24/22",
-            "content": "",
+            "content": "Front Matter . Each markdown or jupyter post contains a set configurations at the head of the file known as Front-Matter. Front-matter settings can change many things including TOC, author, and you can also hide documents . &gt; Basics of Python quiz - toc:true - badges: true - author: Alex Kumar - comments: true - categories: [jupyter, csp] . This is an example of front matter and this will set the author, tags, and allow comments . _config.yml . lots of defautl settings can be changed whithin the repositories config file. This allows for pictures and description extensions. This allows for more customization. .",
             "url": "https://alexkumar19.github.io/fastpages-APCSP/jupyter/csp/2022/08/24/BlogPostNotes.html",
             "relUrl": "/jupyter/csp/2022/08/24/BlogPostNotes.html",
             "date": " • Aug 24, 2022"
