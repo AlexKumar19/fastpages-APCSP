@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      8 min read
     
 </span></p>
 
@@ -197,44 +197,6 @@ Directory /home/alexkumar/vscode/fastpages-APCSP exists.
 </div>
 </div>
 
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>failedto<span class="o">()</span> <span class="o">{</span>
-    <span class="nb">echo</span> <span class="s2">"Failed to </span><span class="nv">$1</span><span class="s2">. Please manually debug any errors printed to STDERR."</span>
-    <span class="nb">exit</span>
-<span class="o">}</span>
-
-<span class="k">if</span> ! jupyter <span class="p">&amp;</span>&gt;/dev/null<span class="p">;</span> <span class="k">then</span>
-    failedto <span class="s2">"ensure that Jupyter was installed"</span>
-<span class="k">fi</span>
-
-<span class="o">{</span>
-    <span class="nb">echo</span> <span class="s2">"Installing Jupyter bash kernel..."</span>
-    pip install bash_kernel
-    python -m bash_kernel.install
-<span class="o">}</span> <span class="o">||</span> failedto <span class="s2">"install bash kernel"</span>
-
-<span class="o">{</span>
-    <span class="nb">echo</span> <span class="s2">"Installing Jupyter node kernel..."</span>
-    npm install --global ijavascript
-    ijsinstall
-<span class="o">}</span> <span class="o">||</span> failedto <span class="s2">"install node kernel"</span>
-
-<span class="nb">echo</span> <span class="s2">"Both the bash and javascript (via NodeJS) kernels have been installed!"</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
