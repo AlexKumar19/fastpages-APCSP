@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -127,9 +127,9 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#Defining-InfoDb-with-extra-entries">Defining InfoDb with extra entries </a></li>
-<li class="toc-entry toc-h1"><a href="#Independent-cell-that-uses-a-for-loop-to-print-out-all-of-the-data-in-InfoDb">Independent cell that uses a for loop to print out all of the data in InfoDb </a></li>
-<li class="toc-entry toc-h1"><a href="#Independent-cell-that-uses-while-loops-to-showcase-work-with-data">Independent cell that uses while loops to showcase work with data </a></li>
-<li class="toc-entry toc-h1"><a href="#for-loop-with-index-that-prints-out-all-the-data-in-InfoDb">for loop with index that prints out all the data in InfoDb </a></li>
+<li class="toc-entry toc-h1"><a href="#For-loop-to-print-out-InfoDb">For loop to print out InfoDb </a></li>
+<li class="toc-entry toc-h1"><a href="#While-loop-to-print-out-InfoDb">While loop to print out InfoDb </a></li>
+<li class="toc-entry toc-h1"><a href="#for-loop-to-print-out-InfoDb">for loop to print out InfoDb </a></li>
 <li class="toc-entry toc-h1"><a href="#Recursion-to-print-out-all-of-InfoDb">Recursion to print out all of InfoDb </a></li>
 </ul><!--
 #################################################
@@ -146,6 +146,8 @@ window.onload = wrap_img;
 <h1 id="Defining-InfoDb-with-extra-entries">
 <a class="anchor" href="#Defining-InfoDb-with-extra-entries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Defining InfoDb with extra entries<a class="anchor-link" href="#Defining-InfoDb-with-extra-entries"> </a>
 </h1>
+<p>Purpose of this cell is to define InfoDb and add entries about certain people and traits that they have</p>
+
 </div>
 </div>
 </div>
@@ -189,7 +191,7 @@ window.onload = wrap_img;
     <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"alex.k.kumar@gmail.com"</span><span class="p">,</span>
     <span class="s2">"Phone"</span><span class="p">:</span> <span class="s2">"iphone"</span>
 <span class="p">})</span>
-
+<span class="c1"># Adding one extra item to InfoDb</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Maxie"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kumar"</span><span class="p">,</span>
@@ -210,9 +212,11 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Independent-cell-that-uses-a-for-loop-to-print-out-all-of-the-data-in-InfoDb">
-<a class="anchor" href="#Independent-cell-that-uses-a-for-loop-to-print-out-all-of-the-data-in-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>Independent cell that uses a for loop to print out all of the data in InfoDb<a class="anchor-link" href="#Independent-cell-that-uses-a-for-loop-to-print-out-all-of-the-data-in-InfoDb"> </a>
+<h1 id="For-loop-to-print-out-InfoDb">
+<a class="anchor" href="#For-loop-to-print-out-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>For loop to print out InfoDb<a class="anchor-link" href="#For-loop-to-print-out-InfoDb"> </a>
 </h1>
+<p>Purpose of this independent cell is to use a normal loop that goes through Infodb printint out all the entries. The for loop automates the process so we do not have to manually print out all the enries by hand.</p>
+
 </div>
 </div>
 </div>
@@ -271,9 +275,11 @@ Maxie Kumar
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Independent-cell-that-uses-while-loops-to-showcase-work-with-data">
-<a class="anchor" href="#Independent-cell-that-uses-while-loops-to-showcase-work-with-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Independent cell that uses while loops to showcase work with data<a class="anchor-link" href="#Independent-cell-that-uses-while-loops-to-showcase-work-with-data"> </a>
+<h1 id="While-loop-to-print-out-InfoDb">
+<a class="anchor" href="#While-loop-to-print-out-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>While loop to print out InfoDb<a class="anchor-link" href="#While-loop-to-print-out-InfoDb"> </a>
 </h1>
+<p>The purpose of this independent cell block is use a while loop to go print out InfoDb while a certain variable is less than the length of InfoDb. This allows us to print out the data without manually inputting the values to the console</p>
+
 </div>
 </div>
 </div>
@@ -284,9 +290,12 @@ Maxie Kumar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Sets number to the length of InfoDb</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+<span class="c1">#temporary variable i set to 0</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
+    <span class="c1">#while i is less than the number or the length of InfoDb, it prints out the data in InfoDb</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"LastName"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"DOB:"</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"DOB"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Residence"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Email: "</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Email"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Phone: "</span> <span class="p">,</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Phone"</span><span class="p">])</span>
     <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
 </pre></div>
@@ -334,9 +343,11 @@ Maxie Kumar
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="for-loop-with-index-that-prints-out-all-the-data-in-InfoDb">
-<a class="anchor" href="#for-loop-with-index-that-prints-out-all-the-data-in-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>for loop with index that prints out all the data in InfoDb<a class="anchor-link" href="#for-loop-with-index-that-prints-out-all-the-data-in-InfoDb"> </a>
+<h1 id="for-loop-to-print-out-InfoDb">
+<a class="anchor" href="#for-loop-to-print-out-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>for loop to print out InfoDb<a class="anchor-link" href="#for-loop-to-print-out-InfoDb"> </a>
 </h1>
+<p>The purpose of this independent code cell is to use a for loop that will go over all the data in infoDB without having to manually print out every single statement. The for loop will repeat the print function for every single entry in InfoDb</p>
+
 </div>
 </div>
 </div>
@@ -348,6 +359,7 @@ Maxie Kumar
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)):</span>
+    <span class="c1">#prints out the items for every i in the InfoDb</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"LastName"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"DOB:"</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"DOB"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Residence"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Email: "</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Email"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Phone: "</span> <span class="p">,</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Phone"</span><span class="p">])</span>
 </pre></div>
 
@@ -397,6 +409,8 @@ Maxie Kumar
 <h1 id="Recursion-to-print-out-all-of-InfoDb">
 <a class="anchor" href="#Recursion-to-print-out-all-of-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursion to print out all of InfoDb<a class="anchor-link" href="#Recursion-to-print-out-all-of-InfoDb"> </a>
 </h1>
+<p>This recursion which utilizes a function to print out all the data in InfoDb is used to automate the printint process so we will not have to manually print out every single line. It uses a function that also uses embedded if statements that also calls itself at the end. This allows us to go over every single entry inside of InfoDb.</p>
+
 </div>
 </div>
 </div>
@@ -407,15 +421,19 @@ Maxie Kumar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#sets variable n equal to the length of Info Db</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+<span class="c1">#function that checks to see if i is n, and if it is non, it will parse through InfoDb and print it out</span>
 <span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span> <span class="k">return</span>
+    <span class="c1">#format string to output InfoDb in an organized foramt</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">     DOB: </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">     Residence: </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">     Email: </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">     Phone: </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">    """</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"LastName"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"DOB"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Residence"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Email"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Phone"</span><span class="p">]))</span>
+    <span class="c1">#recalls the function output to go over every single person in InfoDb</span>
     <span class="n">output</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
 <span class="n">output</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
