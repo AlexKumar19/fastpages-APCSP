@@ -3,7 +3,6 @@ title: HTML and markdown Fragments
 toc: true
 categories: [csp, jupyter]
 permalink: /csp/HTMLMarkdownFragments
-image: /images/python_lists.png
 categories: [csp, jupyter]
 tags: [python]
 ---
