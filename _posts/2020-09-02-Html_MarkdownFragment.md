@@ -8,9 +8,6 @@
 - tags: [python]
 ---
 
-# HTML and markdown fragments
-> Basics of HTML and markdown fragments
-
 # Changing Theme from Minima to DarkMode
 Some things that I noticed when changing the theme to darkmode was that I could not do it through the index.htmlm and I was forced to do it through the _sass file.
 - The entire background including the header and footer was changed to black ad the text was changed
