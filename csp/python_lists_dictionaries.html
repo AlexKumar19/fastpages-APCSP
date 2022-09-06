@@ -13,14 +13,12 @@
 <link rel="canonical" href="https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries" />
 <meta property="og:url" content="https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries" />
 <meta property="og:site_name" content="fastpages" />
-<meta property="og:image" content="https://alexkumar19.github.io/fastpages-APCSP/images/python_lists.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-04T00:00:00-05:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://alexkumar19.github.io/fastpages-APCSP/images/python_lists.png" />
+<meta property="article:published_time" content="2022-09-05T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Lists, Dictionaries, Iteration" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T00:00:00-05:00","datePublished":"2022-09-04T00:00:00-05:00","description":"An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.","headline":"Lists, Dictionaries, Iteration","image":"https://alexkumar19.github.io/fastpages-APCSP/images/python_lists.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries"},"url":"https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-05T00:00:00-05:00","datePublished":"2022-09-05T00:00:00-05:00","description":"An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.","headline":"Lists, Dictionaries, Iteration","mainEntityOfPage":{"@type":"WebPage","@id":"https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries"},"url":"https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastpages-APCSP/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://alexkumar19.github.io/fastpages-APCSP/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages-APCSP/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -75,8 +73,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Lists, Dictionaries, Iteration</h1><p class="page-description">An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-04T00:00:00-05:00" itemprop="datePublished">
-        Sep 4, 2022
+    <h1 class="post-title p-name" itemprop="name headline">Lists, Dictionaries, Iteration</h1><p class="page-description">An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-05T00:00:00-05:00" itemprop="datePublished">
+        Sep 5, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -129,7 +127,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Defining-InfoDb-with-extra-entries">Defining InfoDb with extra entries </a></li>
 <li class="toc-entry toc-h1"><a href="#For-loop-to-print-out-InfoDb">For loop to print out InfoDb </a></li>
 <li class="toc-entry toc-h1"><a href="#While-loop-to-print-out-InfoDb">While loop to print out InfoDb </a></li>
-<li class="toc-entry toc-h1"><a href="#for-loop-to-print-out-InfoDb">for loop to print out InfoDb </a></li>
+<li class="toc-entry toc-h1"><a href="#for-loop-with-index-to-print-out-InfoDb">for loop with index to print out InfoDb </a></li>
 <li class="toc-entry toc-h1"><a href="#Recursion-to-print-out-all-of-InfoDb">Recursion to print out all of InfoDb </a></li>
 <li class="toc-entry toc-h1"><a href="#Outputting-data-in-Reverse-Order">Outputting data in Reverse Order </a></li>
 <li class="toc-entry toc-h1"><a href="#Quiz-That-stores-into-a-dictionary">Quiz That stores into a dictionary </a></li>
@@ -345,10 +343,10 @@ Maxie Kumar
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="for-loop-to-print-out-InfoDb">
-<a class="anchor" href="#for-loop-to-print-out-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>for loop to print out InfoDb<a class="anchor-link" href="#for-loop-to-print-out-InfoDb"> </a>
+<h1 id="for-loop-with-index-to-print-out-InfoDb">
+<a class="anchor" href="#for-loop-with-index-to-print-out-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>for loop with index to print out InfoDb<a class="anchor-link" href="#for-loop-with-index-to-print-out-InfoDb"> </a>
 </h1>
-<p>The purpose of this independent code cell is to use a for loop that will go over all the data in infoDB without having to manually print out every single statement. The for loop will repeat the print function for every single entry in InfoDb</p>
+<p>The purpose of this independent code cell is to use a for loop with an index that will go over all the data in infoDB without having to manually print out every single statement. The for loop will repeat the print function for every single entry in InfoDb</p>
 
 </div>
 </div>
