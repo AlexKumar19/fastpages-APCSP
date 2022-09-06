@@ -16,4 +16,4 @@ Some things that I noticed when changing the theme to darkmode was that I could 
 - Another thing was that the font was different, although it was still legible I liked the old one better
 - the installation process of getting the themes in was creating a new folder in the _sass folder and putting the darkmode code it, and the process was very smooth
 
-![websitepicture.png](https://github.com/AlexKumar19/fastpages-APCSP/blob/master/images/websitepicture.png?raw=true)
+![](https://github.com/AlexKumar19/fastpages-APCSP/blob/master/images/websitepicture.png?raw=true)
