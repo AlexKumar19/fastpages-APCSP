@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -530,6 +530,8 @@ Maxie Kumar
 <h1 id="Quiz-That-stores-into-a-dictionary">
 <a class="anchor" href="#Quiz-That-stores-into-a-dictionary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz That stores into a dictionary<a class="anchor-link" href="#Quiz-That-stores-into-a-dictionary"> </a>
 </h1>
+<p>The purpose of this code block is to test for basic animal trivia and it does this through multiple functions that stores the answers and questions in a dictionary. It calls back to the dictionary using for loops and then embedded whithin the for loops, it calls back to the function to print out the question and take input.</p>
+
 </div>
 </div>
 </div>
@@ -540,7 +542,27 @@ Maxie Kumar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Data</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">question_and_answers</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span> <span class="c1">#function that prints out the question and takes in input</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="nb">input</span><span class="p">)</span> 
+
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#percent correct variable</span>
+
+<span class="c1">#dictionary with answers</span>
+<span class="n">questions_answers</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"Whats the largest mammal"</span> <span class="p">:</span> <span class="s2">"blue whale"</span><span class="p">,</span> 
+                     <span class="s2">"whats the fastest animal"</span> <span class="p">:</span> <span class="s2">"cheetah"</span><span class="p">,</span> 
+                     <span class="s2">"what color is a flamingo"</span> <span class="p">:</span> <span class="s2">"pink"</span><span class="p">,</span>
+                     <span class="s2">"Whats is the tallest animal"</span> <span class="p">:</span> <span class="s2">"giraffe"</span><span class="p">}]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">questions_answers</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">question</span><span class="p">,</span> <span class="n">answer</span> <span class="ow">in</span> <span class="n">i</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">question_and_answers</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="c1"># calls back to the questionanswer function</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Answer: "</span><span class="p">)</span> <span class="c1"># variable that connects to the user's input</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>  <span class="c1"># if the answer provided is correct</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">"is correct"</span><span class="p">)</span>
+            <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># if the answer provided is wrong</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">"is wrong"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="mi">4</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="s2">"%"</span><span class="p">)</span> <span class="c1">#outputs the correct variable as a percentage</span>
 </pre></div>
 
     </div>
@@ -553,7 +575,15 @@ Maxie Kumar
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>What is your name
+<pre>Question: Whats the largest mammal
+blue whale is correct
+Question: whats the fastest animal
+cheetah is correct
+Question: what color is a flamingo
+pink is correct
+Question: Whats is the tallest animal
+giraffe is correct
+100.0 %
 </pre>
 </div>
 </div>
