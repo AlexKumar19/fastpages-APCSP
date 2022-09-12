@@ -32,15 +32,20 @@ In order to test out our code, we used the console.log to test out what the code
 Some challenges was formatting the quiz into the right list and dictionary so we could call to it. This was very tedious and very hard because and syntax errors in the large array stopped the whole code all togther. Another problem that came up and that the variables were not resetting after each function use. In order to solve this we had to make a new function that resets all the variables.
 
 ``` javascript
-function setSelected(num) {
-    if (selected != null) {
-      setProperty("label" + selected, "text-color", "black");
-    }
+function finish() {
+    setScreen("finishscreen");
+    setProperty("score", "text", correct + "/3, which is " + Math.floor((correct*1.0/3)*100) + "%")
+    onEvent("backbutton", "click", function( ) {
+      setScreen("BegginingScreen");
+      question = 1;
+      correct = 0;
+      selected = null;
+    });
+    
+}
  
-    selected = num;
-    setProperty("label" + selected, "text-color", "red");
-  }
-``` 
-
+ ``` 
+This javascript codeblock function allows us to manage our complexity and use an algorithm at the same time. This code block is the finish screen function that changes the screen, and it also outputs the score, to do this it it takes in the variable correct that was made earlier in the code and divides it by 3 and multiplies it by 100 to get a percent. Then it also has the back button inside of the function, so that if you click the button it sends you back to the beggining screen and it resets all the variables. This is a very usefull function because instead of having to say the entire code block over and over again, we can just call the function
+ finish()
 # Successes
 Some of our success came form the onEvent block because it was very easy to use and allowed us to save a lot of time without our code. This Onevent block led to us ultimately creating a working quiz that enabled me and safin to combine the quizes that we made.
