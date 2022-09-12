@@ -11,6 +11,9 @@ permalink: /csp/Codeorgblog
 # Design Work
 Me and Safin met up after school at Safin's house, we were able to draw images and sketches using his ipad. We decided to do one screen and replace images with a 2x2 grid with images and text boxes to display the labels. We also finallized our page by putting a text box at the top that gives the question. We also planned out a score page that displays the percent accuracy which represents how many questions they were able to get right.
 
+# Purpose
+The purpose of the app that we were able to create tests the user on the important knowledge about basketball and tennis. It also allows the user to understand how to play because there is a tutorial page. I sometimes have troubles remembering these important achievements that these players have made, and this quiz allows us to recall that information very easily.
+
 # Design
 The design that me and Safin chose was to design our own quiz and eventually come together to make one app that accesses both of our quizzes. The way that We planned this was storing all of our quiz data into one list of dictionary respectively called Basketball and Tennis and we uploaded the lists into the same app.
 
