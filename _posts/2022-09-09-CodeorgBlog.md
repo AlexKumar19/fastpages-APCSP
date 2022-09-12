@@ -9,7 +9,7 @@ permalink: /csp/Codeorgblog
 
 [Link](https://studio.code.org/projects/applab/q4hZDkGXBcYJunc7WLT1YmG3eCs6XlK45Kkq_73Y__M/edit)
 # Design Work
-Me and Safin met up after school at Safin's house, we were able to draw images and sketches using his ipad. We decided to do one screen and replace images with a 2x2 grid with images and text boxes to display the labels. We also finallized our page by putting a text box at the top that gives the question. We also planned out a score page that displays the percent accuracy which represents how many questions they were able to get right.
+Me and Safin met up after school at Safin's house, we were able to draw images and sketches using his ipad. We decided to do one screen and replace images with a 2x2 grid with images and text boxes to display the labels. We also finallized our page by putting a text box at the top that gives the question. We also planned out a score page that displays the percent accuracy which represents how many questions they were able to get right. We also planned out to do basketbal and tennis because basketball is my favorite sport and tennis is safins favorite sport
 
 # Purpose
 The purpose of the app that we were able to create tests the user on the important knowledge about basketball and tennis. It also allows the user to understand how to play because there is a tutorial page. I sometimes have troubles remembering these important achievements that these players have made, and this quiz allows us to recall that information very easily.
