@@ -7,13 +7,7 @@ categories: [markdown, csp]
 permalink: /csp/Codeorgblog
 ---
 
-Blog your “design”, “successes”, discoveries, challenges. For “design”, and “successes” try to blog according to Create Performance Task skills and rubric.
-Program Purpose and Function
-Data Abstraction
-Managing Complexity
-Procedural Abstraction
-Algorithm Implementation
-Testing
+[Link](https://studio.code.org/projects/applab/q4hZDkGXBcYJunc7WLT1YmG3eCs6XlK45Kkq_73Y__M/edit)
 # Design
 The design that me and Safin chose was to design our own quiz and eventually come together to make one app that accesses both of our quizzes. The way that We planned this was storing all of our quiz data into one list of dictionary respectively called Basketball and Tennis and we uploaded the lists into the same app.
 
