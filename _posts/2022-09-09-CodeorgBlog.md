@@ -1,10 +1,10 @@
 ---
 toc: true
 layout: post
-description: Code.org quiz blog
-title: Code.org Blog
+description: Codorg quiz blog
+title: Codeorg Blog
 categories: [markdown, csp]
-permalink: /csp/Code.orgblog
+permalink: /csp/Codeorgblog
 ---
 
 Blog your “design”, “successes”, discoveries, challenges. For “design”, and “successes” try to blog according to Create Performance Task skills and rubric.
