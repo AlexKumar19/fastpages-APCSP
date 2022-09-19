@@ -12,6 +12,7 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+<<<<<<< HEAD
 settings.ini
 Gemfile.lock
 _posts/2020-02-20-test.md
@@ -30,3 +31,18 @@ assets/img/2022-08-28-Physics-Lab-Notes/media/image5.jpg
 assets/img/2022-08-28-Physics-Lab-Notes/media/image1.png
 _posts/2022-08-28-Physics-Lab-Notes.md
 _posts/2022-08-28-basicpythonquiz.md
+=======
+Gemfile.lock
+settings.ini
+_posts/2022-08-21-firstjuypternotebook.md
+assets/img/
+_posts/2020-02-20-test.md
+images/copied_from_nb/my_icons/fastai_logo.png
+_posts/2022-08-29-TP120-python_lists.md
+_posts/2022-08-24-BlogPostNotes.md
+_posts/2022-08-25-bashvalidatetoolsetup.md
+_posts/2022-08-28-Physics-Lab-Notes.md
+_posts/2022-08-31-Python-list-Dictionaries-Iteration.md
+_posts/2022-08-31-basicpythonquiz.md
+_posts/2022-08-26-Resume.md
+>>>>>>> f8d257ae07962d19a14b180a7803a5649ce23e38
