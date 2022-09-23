@@ -12,6 +12,26 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+<<<<<<< HEAD
+settings.ini
+Gemfile.lock
+_posts/2020-02-20-test.md
+_posts/2022-08-21-firstjuypternotebook.md
+_posts/2022-08-24-BlogPostNotes.md
+_posts/2022-08-26-Resume.md
+_posts/2022-08-25-bashvalidatetoolsetup.md
+assets/img/2022-08-28-Physics-Lab-Notes/media/image2.png
+assets/img/2022-08-28-Physics-Lab-Notes/media/image3.png
+assets/img/2022-08-28-Physics-Lab-Notes/media/image4.png
+assets/img/2022-08-28-Physics-Lab-Notes/media/image7.png
+assets/img/2022-08-28-Physics-Lab-Notes/media/image8.png
+assets/img/2022-08-28-Physics-Lab-Notes/media/image6.jpg
+images/copied_from_nb/my_icons/fastai_logo.png
+assets/img/2022-08-28-Physics-Lab-Notes/media/image5.jpg
+assets/img/2022-08-28-Physics-Lab-Notes/media/image1.png
+_posts/2022-08-28-Physics-Lab-Notes.md
+_posts/2022-08-28-basicpythonquiz.md
+=======
 Gemfile.lock
 settings.ini
 _posts/2022-08-21-firstjuypternotebook.md
@@ -25,3 +45,8 @@ _posts/2022-08-28-Physics-Lab-Notes.md
 _posts/2022-08-31-Python-list-Dictionaries-Iteration.md
 _posts/2022-08-31-basicpythonquiz.md
 _posts/2022-08-26-Resume.md
+
+_posts/2022-09-02-Html-and-markdown-fragments.md
+_posts/2022-09-18-basicpythonquiz.md
+_posts/2022-09-18-Python-list-Dictionaries-Iteration.md
+_posts/2022-09-11-Preformance-Task-Planning.md
