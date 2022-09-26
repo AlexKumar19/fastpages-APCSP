@@ -530,8 +530,8 @@ button { animation: wiggle 2s linear infinite; }
   35% { transform: rotateZ(-4deg); }
   40%, 100% { transform: rotateZ(0); } }
 
-button { height: 4em; width: 7em; background: #8d7d7d; border: none; border-top: 3px solid orange; border-radius: 0 0 0.2em 0.2em; color: #fff; font-family: Helvetica, Arial, Sans-serif; font-size: 1em; transform-origin: 50% 5em; }
+button { height: 4em; width: 10em; background: black; border: none; border-top: 3px solid orange; border-radius: 0 0 0.2em 0.2em; color: #fffefe; font-family: Helvetica, Arial, Sans-serif; font-size: 1em; transform-origin: 50% 5em; }
 
-.wrapper2 { width: 100%; text-align: center; }
+.wrapper2 { width: 100%; display: flex; flex-direction: column; align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
