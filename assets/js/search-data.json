@@ -272,17 +272,6 @@
 
   
       ,"page3": {
-          "title": "HTML table and Java",
-          "content": "",
-          "url": "https://alexkumar19.github.io/fastpages-APCSP/HTMLtable/",
-          "relUrl": "/HTMLtable/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page4": {
           "title": "About Me",
           "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://alexkumar19.github.io/fastpages-APCSP/about/",
@@ -293,9 +282,9 @@
   
 
   
-      ,"page5": {
+      ,"page4": {
           "title": "HTML and Javascript table",
-          "content": "Link .",
+          "content": "| HTML + JavaScript Table | LaLiga Generator | .",
           "url": "https://alexkumar19.github.io/fastpages-APCSP/HTMLTable/",
           "relUrl": "/HTMLTable/",
           "date": ""
@@ -325,7 +314,7 @@
   
 
   
-      ,"page14": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://alexkumar19.github.io/fastpages-APCSP/robots.txt",
