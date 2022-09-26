@@ -18,7 +18,7 @@ var players = ["Stephen Curry" , "LeBron James", "Michael Jordan", "Kareem Abdul
 var button = document.getElementById("1")
         var random2 = document.getElementById("random")
         button.onclick=function() {
-            var random = players[Math.floor(Math.random()*players.length)];
+            let random = players[Math.floor(Math.random()*players.length)];
             random2.innerHTML = random
         }
 </script>
@@ -32,7 +32,7 @@ var players = ["Stephen Curry" , "LeBron James", "Michael Jordan", "Kareem Abdul
 var button = document.getElementById("1")
         var random2 = document.getElementById("random")
         button.onclick=function() {
-            var random = players[Math.floor(Math.random()*players.length)];
+            let random = players[Math.floor(Math.random()*players.length)];
             random2.innerHTML = random
         }
 ```
