@@ -249,19 +249,16 @@
   
 
   
-
+      ,"page4": {
+          "title": "HTML and Javascript table",
+          "content": "",
+          "url": "https://alexkumar19.github.io/fastpages-APCSP/HTMLTable/",
+          "relUrl": "/HTMLTable/",
+          "date": ""
+      }
+      
   
 
-  
-  
-
-  
-  
-
-  
-  
-
-  
   
 
   
@@ -270,7 +267,21 @@
   
 
   
-      ,"page12": {
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://alexkumar19.github.io/fastpages-APCSP/robots.txt",
