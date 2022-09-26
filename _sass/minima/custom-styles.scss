@@ -46,15 +46,13 @@ button {
 
   
   button {
-    
     height: 4em;
-    width: 7em;
-    
-    background: rgb(141, 125, 125);
+    width: 10em;
+    background: rgb(0, 0, 0);
     border: none;
     border-top: 3px solid orange;
     border-radius: 0 0 0.2em 0.2em;
-    color: #fff;
+    color: rgb(255, 254, 254);
     font-family: Helvetica, Arial, Sans-serif;
     font-size: 1em;
     transform-origin: 50% 5em;
@@ -62,5 +60,7 @@ button {
 
   .wrapper2 {
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
