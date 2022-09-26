@@ -14,10 +14,11 @@ permalink: /Basketballdatagen/
 
 <script> 
 var players = ["Stephen Curry" , "LeBron James", "Michael Jordan", "Kareem Abdul-Jabbar", "Kobe Bryant", "Shaquille ONeal", "Larry Bird", "Wilt Chamberlain", "Magic Johnson"]
-var random = players[Math.floor(Math.random()*players.length)];
+
 var button = document.getElementById("1")
         var random2 = document.getElementById("random")
         button.onclick=function() {
+            var random = players[Math.floor(Math.random()*players.length)];
             random2.innerHTML = random
         }
 </script>
@@ -27,10 +28,11 @@ This is how it works:
 ```javascript
 
 var players = ["Stephen Curry" , "LeBron James", "Michael Jordan", "Kareem Abdul-Jabbar", "Kobe Bryant", "Shaquille ONeal", "Larry Bird", "Wilt Chamberlain", "Magic Johnson"]
-var random = players[Math.floor(Math.random()*players.length)];
+
 var button = document.getElementById("1")
         var random2 = document.getElementById("random")
         button.onclick=function() {
+            var random = players[Math.floor(Math.random()*players.length)];
             random2.innerHTML = random
         }
 ```
