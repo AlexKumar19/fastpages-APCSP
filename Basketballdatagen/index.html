@@ -115,7 +115,7 @@ var players = ["Stephen Curry" , "LeBron James", "Michael Jordan", "Kareem Abdul
 var button = document.getElementById("1")
         var random2 = document.getElementById("random")
         button.onclick=function() {
-            var random = players[Math.floor(Math.random()*players.length)];
+            let random = players[Math.floor(Math.random()*players.length)];
             random2.innerHTML = random
         }
 </script>
@@ -128,7 +128,7 @@ var button = document.getElementById("1")
 <span class="kd">var</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">)</span>
         <span class="kd">var</span> <span class="nx">random2</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">random</span><span class="dl">"</span><span class="p">)</span>
         <span class="nx">button</span><span class="p">.</span><span class="nx">onclick</span><span class="o">=</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">random</span> <span class="o">=</span> <span class="nx">players</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="nx">players</span><span class="p">.</span><span class="nx">length</span><span class="p">)];</span>
+            <span class="kd">let</span> <span class="nx">random</span> <span class="o">=</span> <span class="nx">players</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="nx">players</span><span class="p">.</span><span class="nx">length</span><span class="p">)];</span>
             <span class="nx">random2</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">random</span>
         <span class="p">}</span>
 </code></pre></div></div>

@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Basketball Data Generator",
-            "content": "NBA generator . This is a button that will randomly generate a name from a great player in the NBA | . Click Me! . . This is how it works: . var players = [&quot;Stephen Curry&quot; , &quot;LeBron James&quot;, &quot;Michael Jordan&quot;, &quot;Kareem Abdul-Jabbar&quot;, &quot;Kobe Bryant&quot;, &quot;Shaquille ONeal&quot;, &quot;Larry Bird&quot;, &quot;Wilt Chamberlain&quot;, &quot;Magic Johnson&quot;] var button = document.getElementById(&quot;1&quot;) var random2 = document.getElementById(&quot;random&quot;) button.onclick=function() { var random = players[Math.floor(Math.random()*players.length)]; random2.innerHTML = random } .",
+            "content": "NBA generator . This is a button that will randomly generate a name from a great player in the NBA | . Click Me! . . This is how it works: . var players = [&quot;Stephen Curry&quot; , &quot;LeBron James&quot;, &quot;Michael Jordan&quot;, &quot;Kareem Abdul-Jabbar&quot;, &quot;Kobe Bryant&quot;, &quot;Shaquille ONeal&quot;, &quot;Larry Bird&quot;, &quot;Wilt Chamberlain&quot;, &quot;Magic Johnson&quot;] var button = document.getElementById(&quot;1&quot;) var random2 = document.getElementById(&quot;random&quot;) button.onclick=function() { let random = players[Math.floor(Math.random()*players.length)]; random2.innerHTML = random } .",
             "url": "https://alexkumar19.github.io/fastpages-APCSP/Basketballdatagen/",
             "relUrl": "/Basketballdatagen/",
             "date": " • Sep 26, 2022"
