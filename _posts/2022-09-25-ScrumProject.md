@@ -16,7 +16,7 @@ permalink: /csp/ScrumProjectbrainstorm
 - We will hopefully end with a public website that will allow friends and family to communicate and post goals about their daily lives. This website will be nicely decorated and easy to use in order to ensure that the people can find success in their own goals.
 
 # Here is a brainstorming picture 
-![]({{site.baseurl}}/scrumteam.png) 
+![]({{site.baseurl}}/images/scrumteam.png) 
 
 
-![]({{site.baseurl}}/scrumprocess.png) 
+![]({{site.baseurl}}/images/scrumprocess.png) 
