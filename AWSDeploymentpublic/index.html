@@ -103,14 +103,73 @@ window.onload = wrap_img;
 </ul><h1 id="docker">
 <a class="anchor" href="#docker" aria-hidden="true"><span class="octicon octicon-link"></span></a>Docker!</h1>
 
-<p>Me and my group was able to create four different containers that are each bound to 8080 with a unique port for each site. Each website also has a unique image!
-<img src="/fastpages-APCSP/images/docker.png" alt=""></p>
+<p>Me and my group was able to create four different containers that are each bound to 8080 inside the container with a unique port outside the container for each site. Each website also has a unique image!
+<img src="/fastpages-APCSP/images/BENLEE.png" alt=""></p>
 
-<p>Next we tested to see if we were able to run the websites inside of the container that we made!
+<p><br></p>
+
+<p>Next we tested to see if we were able to display the websites inside of the container that we made!
 <img src="/fastpages-APCSP/images/curl.png" alt=""></p>
+
+<p><br></p>
 
 <p>This is the process of pulling from my flask and then updating the website on AWS!
 <img src="/fastpages-APCSP/images/pull.png" alt=""></p>
+
+<p><br></p>
+
+<p>Here is me using curl command to show the website inside of the AWS terminal!
+<img src="/fastpages-APCSP/images/curl2.png" alt=""></p>
+
+<p>Here is my docker-compose.yml file Here I changed the image to become unique for my flask and I changed the port to have 8089 to differentiate from my container vs my teamates conatainers</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+<span class="na">services</span><span class="pi">:</span>
+        <span class="na">web</span><span class="pi">:</span>
+                <span class="na">image</span><span class="pi">:</span> <span class="s">flask_alex_v1</span>
+                <span class="na">build</span><span class="pi">:</span> <span class="s">.</span>
+                <span class="na">ports</span><span class="pi">:</span>
+                        <span class="pi">-</span> <span class="s2">"</span><span class="s">8089:8080"</span>
+                <span class="na">volumes</span><span class="pi">:</span>
+                        <span class="pi">-</span> <span class="s">persistent_volume:/app/volumes</span>
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">persistent_volume</span><span class="pi">:</span>
+    <span class="na">driver</span><span class="pi">:</span> <span class="s">local</span>
+    <span class="na">driver_opts</span><span class="pi">:</span>
+      <span class="na">o</span><span class="pi">:</span> <span class="s">bind</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">none</span>
+      <span class="na">device</span><span class="pi">:</span> <span class="s">/home/ubuntu/alex-flask/volumes</span>
+</code></pre></div></div>
+<p>Here is my dockerfile! It is basically original except for the COPY ..</p>
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> docker.io/python:3.9</span>
+
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+
+<span class="c"># --- [Install python and pip] ---</span>
+<span class="k">RUN </span>apt-get update <span class="o">&amp;&amp;</span> apt-get upgrade <span class="nt">-y</span> <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get <span class="nb">install</span> <span class="nt">-y</span> python3 python3-pip git
+<span class="k">COPY</span><span class="s"> . .</span>
+
+<span class="k">RUN </span>pip <span class="nb">install</span> <span class="nt">--no-cache-dir</span> <span class="nt">-r</span> requirements.txt
+<span class="k">RUN </span>pip3 <span class="nb">install </span>gunicorn
+
+<span class="k">ENV</span><span class="s"> GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8080"</span>
+
+<span class="k">EXPOSE</span><span class="s"> 8080</span>
+
+<span class="k">CMD</span><span class="s"> [ "gunicorn", "main:app" ]</span>
+</code></pre></div></div>
+<p>Here is my nginx file for my flask! Here you can see my personal ports and the public ip that we put.</p>
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">server</span> <span class="p">{</span>
+        <span class="kn">listen</span> <span class="mi">8083</span><span class="p">;</span>
+        <span class="kn">listen</span> <span class="s">[::]:8083</span><span class="p">;</span>
+        <span class="kn">server_name</span> <span class="mi">18</span><span class="s">.216.138.52</span><span class="p">;</span>
+
+        <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+                <span class="kn">proxy_pass</span> <span class="s">http://localhost:8089</span><span class="p">;</span>
+                <span class="kn">add_header</span> <span class="s">"Access-Control-Allow-Origin"</span> <span class="s">*</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
   </div><a class="u-url" href="/fastpages-APCSP/AWSDeploymentpublic/" hidden></a>
 </article>
