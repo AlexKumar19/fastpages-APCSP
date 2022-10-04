@@ -14,5 +14,5 @@ Me and my group was able to create four different containers that are each bound
 Next we tested to see if we were able to run the websites inside of the container that we made!
 ![]({{site.baseurl}}/images/curl.png)
 
-This is the process of pulling from my flask and then updating the website on AWS
+This is the process of pulling from my flask and then updating the website on AWS!
 ![]({{site.baseurl}}/images/pull.png)
