@@ -198,7 +198,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">"topic"</span><span class="p">:</span> <span class="s2">"motivation"</span><span class="p">},</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="c1">#This uses the .request function that sends a post request to the API to retrieve data</span>
 <span class="n">quote</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s2">"quote"</span><span class="p">]</span> <span class="c1">#Sets the variable quote to the quote inside of the API</span>
 <span class="n">author</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s2">"by"</span><span class="p">]</span> <span class="c1">#sets author to the author inside of the API</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Your random inspirational quote is, </span><span class="se">\"</span><span class="s2">"</span> <span class="o">+</span><span class="n">quote</span> <span class="o">+</span><span class="s2">"</span><span class="se">\"</span><span class="s2">"</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"--"</span><span class="p">,</span> <span class="n">author</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Your random inspirational quote is, </span><span class="se">\"</span><span class="s2">"</span> <span class="o">+</span><span class="n">quote</span> <span class="o">+</span><span class="s2">"</span><span class="se">\"</span><span class="s2">"</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"--"</span><span class="p">,</span> <span class="n">author</span><span class="p">)</span> <span class="c1"># Outputs the quote using print()</span>
 </pre></div>
 
     </div>
@@ -211,8 +211,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Your random inspirational quote is, "old is gold"
- -- proverb
+<pre>Your random inspirational quote is, "The bad news is time flies. The good news is you’re the pilot."
+ -- –Michael Altshuler
 </pre>
 </div>
 </div>
@@ -250,16 +250,17 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span> <span class="c1"># Creating the flask application</span>
+<span class="c1"># Creating the array of quotes for the API to parse through</span>
 <span class="n">quotes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"The sky is the limit - Kalani"</span><span class="p">,</span> <span class="s2">"The celling is the roof - Micheal Jordan"</span><span class="p">,</span> <span class="s2">"You miss 100%\ of the shots you don't take -Wayne Gretsky"</span><span class="p">,</span> <span class="s2">"hehe - Navan"</span><span class="p">,</span> <span class="s2">"JSON! - Mort"</span><span class="p">]</span>
+<span class="c1"># Creates a function that uses random to generate a random number whithin the range of the quotes array</span>
 <span class="k">def</span> <span class="nf">randomgen</span><span class="p">():</span>
     <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">quotes</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">number</span>
-
+<span class="c1"># Creating the GET endpoint, so when we call it using /get, it will call to the randomgen function and return the quote from the array</span>
 <span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/get'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">])</span> 
 <span class="k">def</span> <span class="nf">get</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">"connection"</span><span class="p">:</span> <span class="s2">"succesful"</span><span class="p">,</span> <span class="s2">"quote"</span> <span class="p">:</span> <span class="n">quotes</span><span class="p">[</span><span class="n">randomgen</span><span class="p">()]}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">"connection"</span><span class="p">:</span> <span class="s2">"succesful"</span><span class="p">,</span> <span class="s2">"Your quote is"</span> <span class="p">:</span> <span class="n">quotes</span><span class="p">[</span><span class="n">randomgen</span><span class="p">()]}</span>
 </pre></div>
 
     </div>
