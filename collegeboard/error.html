@@ -543,17 +543,17 @@ window.onload = wrap_img;
 
 <span class="c1">#ideally the code should prompt the user multiple times</span>
 <span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">while</span> <span class="n">running</span><span class="p">:</span>
-    <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu&quot;</span><span class="p">)</span>
-    <span class="n">item2</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">item2</span> <span class="ow">in</span> <span class="n">menu</span><span class="p">:</span>
-        <span class="n">total</span> <span class="o">+=</span> <span class="n">menu</span><span class="p">[</span><span class="n">item2</span><span class="p">]</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your cost: &quot;</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
-    <span class="k">elif</span> <span class="n">item2</span> <span class="o">==</span> <span class="s2">&quot;stop&quot;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thank you for shopping!&quot;</span><span class="p">)</span>
-        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Item Try again&quot;</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span> <span class="c1">#while loop that keeps running unless running is false</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu&quot;</span><span class="p">)</span> <span class="c1">#Takes in input</span>
+    <span class="n">item2</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1">#lowercases te input so the user can put in their input with capitlization</span>
+    <span class="k">if</span> <span class="n">item2</span> <span class="ow">in</span> <span class="n">menu</span><span class="p">:</span> <span class="c1">#if statemment that checks to see if the input matches the menu</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">menu</span><span class="p">[</span><span class="n">item2</span><span class="p">]</span> <span class="c1">#Adds the prices the items to the menu</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your cost: &quot;</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total</span><span class="p">))</span> <span class="c1"># prints out the total</span>
+    <span class="k">elif</span> <span class="n">item2</span> <span class="o">==</span> <span class="s2">&quot;stop&quot;</span><span class="p">:</span> <span class="c1"># Checks to see if the user wants to stop the code</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thank you for shopping!&quot;</span><span class="p">)</span> <span class="c1">#prints out the goodbye message</span>
+        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1">#stops the while loop</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># Checks to see if there is invalid input</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Item Try again&quot;</span><span class="p">)</span> <span class="c1"># Finaly prints out message showing the user that the message is invalid</span>
 <span class="c1">#code should add the price of the menu items selected by the user </span>
 <span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
 </pre></div>
