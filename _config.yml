@@ -35,12 +35,12 @@ url: "https://AlexKumar19.github.io" # the base hostname & protocol for your sit
 # 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
 #
 baseurl: "/fastpages-APCSP" # the subpath of your site, e.g. "/blog".
-
+skin: dark
 # Github and twitter are optional:
-minima:
-  social_links:
-    twitter: fastdotai
-    github: fastai
+# # minima:
+#   social_links:
+#     twitter: fastdotai
+#     github: fastai
 
 # Set this to true to get LaTeX math equation support
 use_math: 
