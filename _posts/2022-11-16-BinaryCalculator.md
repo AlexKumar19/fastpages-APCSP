@@ -33,17 +33,35 @@ permalink: /BinaryCalculator/
     <td> <input type="button" value="+" onclick="input('+')" /> </td>
   </tr>
   <tr>
-    <td> <input type="button" value="C" onclick="clear()" /> </td>
+    <td> <input type="button" value="C" onclick="empty()" /> </td>
     <td> <input type="button" value="0" onclick="input('0')" /> </td>
-    <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
+    <td> <input type="button" value="=" onclick="input('calculate')" id="btn" /> </td>
     <td> <input type="button" value="*" onclick="input('*')" /> </td>
   </tr>
 </table>
 </body>
 </html>
-<script>
-function clearScreen() {
-    document.getElementById("output").value = "";
+<script>  
+function empty() {
+  inputs = ""
+  document.getElementById("output").value = ""
 }
-
+let inputs = ""
+let oldinput = ""
+function input(data) {
+  const parsed = Number.parseInt(data)
+  let input = ""
+  if (!isNaN(parsed)){
+    inputs += parsed.toString()
+    document.getElementById("output").value = inputs
+  }else if (data ==='calculate') {
+    console.log(oldinput)
+  } else{    
+    console.log(data)
+    console.log("applying " + data + " to " + inputs)
+    document.getElementById("output").value = inputs + data
+     oldinput = inputs
+    inputs = ""
+  } 
+}
 </script>
