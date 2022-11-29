@@ -112,3 +112,4 @@ hacks for 3.3
 1. iteration
 2. selection
 3. sequence
+![]({{site.baseurl}}/images/questions.png)
