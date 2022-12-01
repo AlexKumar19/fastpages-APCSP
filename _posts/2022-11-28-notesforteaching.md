@@ -113,3 +113,30 @@ hacks for 3.3
 2. selection
 3. sequence
 ![]({{site.baseurl}}/images/questions.png)
+
+# lesson plan for 3.5-3.7
+- Conditionals allow us to check whether a function is true or false
+- we can determine whether something is true or false based off of booleans
+- True or False
+- we can use binary to also check whether a condtional is true or false
+- you can use elif statements to check for multiple different 
+- elif statements allow you to check for ideas such as whether an age is a certain level or a height is a certain height
+- after these conditionals we can then output various things depending on the input
+- to use binary for true or false, 1 represents true and 0 represents false
+-  1 and 0 is 0
+-  1 Xor 0 is 1
+-  1 or 1 is 1
+examples of if statements to check for basic conditionals
+```python
+age = 0
+cart = 0
+# Put the code for ex:1
+if age >= 16:
+    print("works")
+# Put the code for ex:2
+if cart < 4:
+    ("works")
+```
+- algorithms are a set of instructions that take in input and run a certain job and give an output
+- selection uses conditionals to make a decision, for example like a boolean expression 
+- 
