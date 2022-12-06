@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      6 min read
     
 </span></p>
 
@@ -113,6 +113,8 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#lesson-plan-for-35-37">lesson plan for 3.5-3.7</a></li>
+<li class="toc-entry toc-h1"><a href="#unit-3-sections-8-and-10-notes">Unit 3 Sections 8 and 10 Notes!</a></li>
+<li class="toc-entry toc-h1"><a href="#unit-3-sections-9-and-11">Unit 3 Sections 9 and 11</a></li>
 </ul><h1 id="unit-3-section-11-data-types-and-variables">
 <a class="anchor" href="#unit-3-section-11-data-types-and-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3, Section 1.1: Data Types and Variables</h1>
 <ul>
@@ -269,7 +271,105 @@ examples of if statements to check for basic conditionals
   </li>
   <li>algorithms are a set of instructions that take in input and run a certain job and give an output</li>
   <li>selection uses conditionals to make a decision, for example like a boolean expression</li>
+</ul>
+
+<h1 id="unit-3-sections-8-and-10-notes">
+<a class="anchor" href="#unit-3-sections-8-and-10-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3 Sections 8 and 10 Notes!</h1>
+<ul>
+  <li>8.1</li>
+  <li>Section Vocabulary:</li>
+</ul>
+
+<p>Iteration: repeats a certain code blocks over and over as specified</p>
+
+<p>Iteration Statements: repeats until a stopping condition is met</p>
+
+<p>Repeat Until: repeats until blocks iterate over a certain code block until a certain condition is met, will not start unless the condition is false</p>
+
+<ul>
+  <li>Break points can be used to check for conditions to stop looping</li>
+  <li>It is very important to put break points so you don’t have to keep looping forever</li>
+  <li>iteration is a repeating portion of a code</li>
   <li>
+    <p>stopping conditions can be utilized in loops</p>
+  </li>
+  <li>3.8.2</li>
+  <li>iteration statement: causes statements to be repeated</li>
+  <li>when using range function, for example
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="c1">#or
+</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">)</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>    </div>
+  </li>
+  <li>These are both loops thata will iterate through the algorithm</li>
+</ul>
+
+<p>3.8.3</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sports</span> <span class="o">=</span> <span class="p">[</span><span class="s">"basketball"</span><span class="p">,</span><span class="s">"tennis"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sports</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s">"basletball"</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>Another example of a for loop with embedded if statments
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="k">while</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+  <span class="n">number</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>    </div>
+  </li>
+  <li>this is a while loop that will checks if there is no remainer, if there is no remainder it will print otherwise it will just add 1</li>
+  <li>This can be used to find even numbers and if you want to add them up you can also loop through an algorithm that will add the numbers together</li>
+  <li>use int() to get numbers</li>
+</ul>
+
+<h1 id="unit-3-sections-9-and-11">
+<a class="anchor" href="#unit-3-sections-9-and-11" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3 Sections 9 and 11</h1>
+<ul>
+  <li>Algorithms can be written in different ways
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"What Grade Did You Get?"</span><span class="p">)</span>
+<span class="n">grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter Grade:"</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"Wow! Good job!"</span><span class="p">)</span>
+<span class="k">if</span> <span class="mi">70</span> <span class="o">&lt;=</span> <span class="n">grade</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"Nice!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"Do Better"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>This code allows us to take an input of the grade and gives the output of a check of how they are doing</li>
+  <li>small differences in code allows them to have different functions even if it is just the simple change in an operator
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"What Grade Did You Get?"</span><span class="p">)</span>
+<span class="n">grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter Grade:"</span><span class="p">))</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span>
+<span class="n">B</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">&lt;=</span> <span class="n">grade</span> <span class="o">&lt;</span> <span class="mi">90</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">grade</span> <span class="o">&lt;</span> <span class="mi">70</span>
+<span class="k">if</span> <span class="n">A</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"Wow! Good job!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">B</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"Nice!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">C</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"Do Better"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>This is another function that does the same thing assigning a good job to an A grade</li>
+  <li>
+    <p>You can nest if statements to test for multiple conditions whithin a single if statement</p>
+  </li>
+  <li>Creating outlines of a function before creating it allows you to develop it easier.</li>
+  <li>Flowcharts are an easy way to visualize the algorithm</li>
+  <li>Iteration can be used to cycle through an algorithm to check for a condition over and over again</li>
+  <li>If the certain condition is not met it will keep repeating</li>
+  <li>Binary search :repeatedly dividing a search interval in half</li>
 </ul>
 
   </div><a class="u-url" href="/fastpages-APCSP/Lessonnotes/" hidden></a>
