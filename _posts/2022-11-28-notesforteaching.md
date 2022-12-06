@@ -139,4 +139,87 @@ if cart < 4:
 ```
 - algorithms are a set of instructions that take in input and run a certain job and give an output
 - selection uses conditionals to make a decision, for example like a boolean expression 
-- 
+  
+# Unit 3 Sections 8 and 10 Notes!
+- 8.1
+- Section Vocabulary:
+
+Iteration: repeats a certain code blocks over and over as specified
+
+Iteration Statements: repeats until a stopping condition is met
+
+Repeat Until: repeats until blocks iterate over a certain code block until a certain condition is met, will not start unless the condition is false
+
+- Break points can be used to check for conditions to stop looping
+- It is very important to put break points so you don't have to keep looping forever
+- iteration is a repeating portion of a code
+- stopping conditions can be utilized in loops
+  
+- 3.8.2
+- iteration statement: causes statements to be repeated
+- when using range function, for example
+``` python
+for i in range(10)
+    print(i)
+#or
+i = 0
+while (i < 5):
+    print("Hello, World!")
+    i = i + 1
+```
+- These are both loops thata will iterate through the algorithm
+
+3.8.3
+```python
+sports = ["basketball","tennis"]
+for i in sports:
+    if i == "basletball":
+        print(i)
+```
+- Another example of a for loop with embedded if statments
+``` python
+number = 0 
+while number < 10:
+    if number % 2 == 0:
+        print(number)
+    number += 1
+```
+- this is a while loop that will checks if there is no remainer, if there is no remainder it will print otherwise it will just add 1
+- This can be used to find even numbers and if you want to add them up you can also loop through an algorithm that will add the numbers together
+- use int() to get numbers
+
+# Unit 3 Sections 9 and 11
+- Algorithms can be written in different ways
+```python
+print("What Grade Did You Get?")
+grade = int(input("Enter Grade:"))
+if grade >= 90:
+        print("Wow! Good job!")
+if 70 <= grade < 90:
+        print("Nice!")
+elif grade < 70:
+        print("Do Better")
+```
+- This code allows us to take an input of the grade and gives the output of a check of how they are doing
+- small differences in code allows them to have different functions even if it is just the simple change in an operator
+```python
+print("What Grade Did You Get?")
+grade = int(input("Enter Grade:"))
+A = grade >= 90
+B = 70 <= grade < 90
+C = grade < 70
+if A:
+        print("Wow! Good job!")
+elif B:
+        print("Nice!")
+elif C:
+        print("Do Better")
+```
+- This is another function that does the same thing assigning a good job to an A grade
+- You can nest if statements to test for multiple conditions whithin a single if statement
+
+- Creating outlines of a function before creating it allows you to develop it easier.
+- Flowcharts are an easy way to visualize the algorithm
+- Iteration can be used to cycle through an algorithm to check for a condition over and over again
+- If the certain condition is not met it will keep repeating
+- Binary search :repeatedly dividing a search interval in half
