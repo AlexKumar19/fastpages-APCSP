@@ -300,10 +300,105 @@ for i in range(5):
 this loops over 5 times
 
 Expressions, 
-Comparison Operators,some comparison 
- Booleans Expressions and Selection, Booleans Expressions and Iteration, Truth Tables
-Characters, Strings, Length, Concatenation, Upper, Lower, Traversing Strings
-Python If, Elif, Else conditionals; Nested Selection Statements
-Python For, While loops with Range, with List
-Combining loops with conditionals to Break, Continue
+Comparison Operators,some comparison terms are like < and >
+```python
+if num1 > num2:
+    print("num1 is greater than num2")
+```
+ Booleans Expressions and Selection, selects if a value is true or not
+ ```python 
+boolean = True
+falseboolean = False
+ ```
+ 
+  Booleans Expressions and Iteration,
+   Truth Tables
+```javascript
+function truth(){
+    var data = [[1,1], [1,0], [0,1], [0,0]];
+    var text = ""
+    for(let i =0; i < data.length; i++) {
+        text += data[i][0] + "&" + data[i][1] + "-->" + (data[i][0] & data[i][1]).toString() + "<br>"
+    }
+    for(let i =0; i < data.length; i++) {
+        text += data[i][0] + "|" + data[i][1] + "-->" + (data[i][0] | data[i][1]).toString() + "<br>"  
+    }
+    for(let i =0; i < data.length; i++) {
+        text += data[i][0] + "^" + data[i][1] + "-->" + (data[i][0] ^ data[i][1]).toString() + "<br>"
+    }
+    let newdata = [1,0]
+    for(let i =0; i < newdata.length; i++) {
+        text += "~" + newdata[i] + "=" + ~newdata[i] + "<br>"
+    }
+    document.getElementById("text1").innerHTML = text
+}
+truth()
+```
+Characters,A word can be split into characters
+```python
+word = "hi"
+split = word.split()
+```
+Strings, basic values held in a variable 
+```python
+string = "hi"
+```
+
+Length, There is a length function that can get the length of any string
+```python
+list = [1,2,3,4,5,6]
+length = len(list)
+```
+This gets the length of the list
+
+Concatenation, You can combine databases with this
+```python
+import pandas
+pd = pd.concat()
+```
+Python If,  can check for certain conditions
+```python
+if boolean=True:
+    print("any text here")
+```
+
+Elif, This can be used to check for a second function and this is very useful when choosing between certain conditions
+```python
+if boolean=True:
+    print('good')
+elif boolean=False:
+    print("this is bad")
+```
+
+
+Else conditionals;
+
+```python
+if True:
+    print("this is true")
+else:
+    print("not possible")
+```
+ Nested Selection Statements
+ 
+```python
+if True:
+    if dogs==True:
+        print("very good")
+```
+This can be used to checkfor many conditions whithin a certain condition, you can nest many conditions
+
+Python For, 
+```python
+for i in range(5):
+    print(i)
+```
+
+While loops with Range,
+```python
+while i<6:
+    i+= 1
+```
+Combining loops with conditionals to Break,
+ Continue
 Procedural Abstraction, Python Def procedures, Parameters, Return Values
