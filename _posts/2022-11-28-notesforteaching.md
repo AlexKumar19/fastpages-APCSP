@@ -223,3 +223,87 @@ elif C:
 - Iteration can be used to cycle through an algorithm to check for a condition over and over again
 - If the certain condition is not met it will keep repeating
 - Binary search :repeatedly dividing a search interval in half
+
+
+
+Unit 2… Binary/Data Terms
+---------------
+Bits: Bits are the individual numbers that describe binary 
+Bytes, 
+Hexadecimal / Nibbles
+Binary Numbers: Unsigned Integer, Signed Integer, Floating Point
+Binary Data Abstractions: Boolean, ASCII, Unicode, RGB
+Data Compression: Lossy, Lossless (note discussed yet)
+Unit 3… Algorithm/Programming Terms
+-------------------
+Variables: variables are storage
+```python
+var = 3
+```
+This is an example of a variabe
+
+Data Types: Some datatypes are string lists
+
+```python
+list = []
+```
+This is a list
+
+Assignment Operators: the arrow represents assignment operators
+```python
+varknow = 6
+```
+we are assigning a value to this
+
+Managing Complexity with Variables: 
+Lists: lists can be used to store many types of data
+```python
+sports = ["basketball","soccer"]
+```
+
+2D Lists,
+```python
+list = []
+```
+ Dictionaries: very good way to store keys and terms
+ ```python
+dict = {"car":"good", "cat":,"bad"}
+ ```
+ 
+ Class
+Algorithms, 
+Algorithms help smplify code
+```python
+def function():
+    print("hi")
+```
+```python
+def new():
+    print("this is a function"):
+```
+Sequence: represents the order
+```python
+print("this is first")
+print("this is after")
+```
+ Selection makes decision based on data
+```python
+if dog==True:
+    print("there is a dog")
+```
+  Iteration
+  this is aloop
+```python
+for i in range(5):
+    print("hi")
+```
+this loops over 5 times
+
+Expressions, 
+Comparison Operators,some comparison 
+ Booleans Expressions and Selection, Booleans Expressions and Iteration, Truth Tables
+Characters, Strings, Length, Concatenation, Upper, Lower, Traversing Strings
+Python If, Elif, Else conditionals; Nested Selection Statements
+Python For, While loops with Range, with List
+Combining loops with conditionals to Break, Continue
+Procedural Abstraction, Python Def procedures, Parameters, Return Values
