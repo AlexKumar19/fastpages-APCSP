@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -100,6 +100,7 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#unit-3-sections-14-and-15">Unit 3 Sections 14 and 15</a></li>
+<li class="toc-entry toc-h1"><a href="#simulations--unit-3-section-16">Simulations- Unit 3 Section 16</a></li>
 </ul><h1 id="unit-3-sections-14-and-15">
 <a class="anchor" href="#unit-3-sections-14-and-15" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3 Sections 14 and 15</h1>
 
@@ -154,6 +155,79 @@ window.onload = wrap_img;
 </code></pre></div></div>
 <ul>
   <li>This code flips a coin</li>
+</ul>
+
+<h1 id="simulations--unit-3-section-16">
+<a class="anchor" href="#simulations--unit-3-section-16" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulations- Unit 3 Section 16</h1>
+
+<p>3.16 Intro to Simulations</p>
+<ul>
+  <li>Many simulations are used, for example testing a car safety</li>
+  <li>ensuring new technology works</li>
+  <li>simulating a train</li>
+  <li>Simulations are different than an experiment because it is less accurate as its not real</li>
+  <li>Simulations are cheaper and more efficent however it is not as accurate as an experiment</li>
+  <li>It also cannot account for real life factors or outside facters</li>
+</ul>
+
+<p>Real examples</p>
+<ul>
+  <li>You can use a simulation to imitate a game, for example the four corners game.</li>
+  <li>This game can be recreated with this python script</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">status</span> <span class="o">=</span> <span class="s">"in"</span>
+<span class="k">while</span> <span class="n">status</span> <span class="o">!=</span> <span class="s">"out"</span><span class="p">:</span>
+    <span class="n">chooseCorner</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"What corner do you choose?"</span><span class="p">)</span>
+
+    <span class="n">corner</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">chooseCorner</span><span class="p">)</span> <span class="o">==</span> <span class="n">corner</span><span class="p">:</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="s">"out"</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"You chose corner number "</span> <span class="o">+</span> <span class="n">chooseCorner</span> <span class="o">+</span> <span class="s">" and you're OUT"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"You chose corner number "</span> <span class="o">+</span> <span class="n">chooseCorner</span> <span class="o">+</span> <span class="s">" and are still in!"</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>This game basically assigns you a corner randomly and allows you to pick a corner</li>
+</ul>
+
+<p>Rolling a Dice Example</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">parse_input</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">input_string</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">in</span> <span class="p">{</span><span class="s">"1"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">,</span> <span class="s">"3"</span><span class="p">,</span><span class="s">"4"</span><span class="p">,</span> <span class="s">"5"</span><span class="p">,</span> <span class="s">"6"</span><span class="p">}:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Please enter a number from 1 to 6."</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="nb">SystemExit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">roll_dice</span><span class="p">(</span><span class="n">num_dice</span><span class="p">):</span>
+    <span class="n">roll_results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_dice</span><span class="p">):</span>
+        <span class="n">roll</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="n">roll_results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">roll</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">roll_results</span>
+
+
+<span class="n">num_dice_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"How many dice do you want to roll? [1-6] "</span><span class="p">)</span>
+<span class="n">num_dice</span> <span class="o">=</span> <span class="n">parse_input</span><span class="p">(</span><span class="n">num_dice_input</span><span class="p">)</span>
+<span class="n">roll_results</span> <span class="o">=</span> <span class="n">roll_dice</span><span class="p">(</span><span class="n">num_dice</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"you rolled:"</span><span class="p">,</span> <span class="n">roll_results</span><span class="p">)</span> 
+</code></pre></div></div>
+<ul>
+  <li>This code allows us to replicate rolling a dice three times because it usesrandom</li>
+  <li>This is very useful because now we do not have to actually roll the dice three times</li>
+  <li>This has some flaws because it is assuming that the roll is going to be perfect and that it will truly be equal for all sides however becauseof outside factors this may not be true</li>
+</ul>
+
+<p>Game of Life</p>
+<ul>
+  <li>This code is random and uses the library random to pick random boxes creating random patterns</li>
+  <li>this is another example of how a simulation can be used to represent cellular automaton</li>
 </ul>
 
   </div><a class="u-url" href="/fastpages-APCSP/Moreteachcingnotes/" hidden></a>
