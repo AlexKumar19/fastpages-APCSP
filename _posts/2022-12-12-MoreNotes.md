@@ -124,3 +124,65 @@ print("you rolled:", roll_results)
 Game of Life
 - This code is random and uses the library random to pick random boxes creating random patterns
 - this is another example of how a simulation can be used to represent cellular automaton
+
+# Period 4 Lesson 17-18
+
+Undecidability: sometetimes we cannot tell if a certain number will follow the program guidlines
+for example the number example where you divide by 2 or times by 3 and add one. We have to ensure that all the numbers we put in are predictable
+
+```python
+def collatz(i):
+    while i > 1:
+        print(i, end=' ')
+        if (i % 2):
+            # i is odd
+            i = 3*i + 1
+        else:
+            # i is even
+            i = i//2
+    print(1, end='')
+ 
+ 
+i = int(input('Enter i: '))
+print('Sequence: ', end='')
+collatz(i)
+```
+This code print sout the hialstone numbers
+
+```python
+def collatz(i):
+    while i != 1:
+        if i % 2 > 0:
+             i =((3 * i) + 1)
+             list_.append(i)
+        else:
+            i = (i / 2)
+            list_.append(i)
+    return list_
+
+
+print('Please enter a number: ', end='')
+while True:
+    try:
+        i = int(input())
+        list_ = [i]
+        break
+    except ValueError:
+        print('Invaid selection, try again: ', end='')
+
+
+l = collatz(i)
+
+print('')
+print('Number of iterations:', len(l) - 1)
+```
+Collatz- The Collatz conjecture is one of the most famous unsolved problems in mathematics. The conjecture asks whether repeating two simple arithmetic operations will eventually transform every positive integer into 1.
+Undecidable problems gives yes or no but there is no code that can solve it on all inputs
+unsolvable problems, no algorithm can solve the problem
+Hailstone numbers are the output of the Collatz code.
+
+Unit 3, Section 17: 
+
+- Algorithm efficieny is how many steps you have to use to solve a certain problem
+- by being very efficient you would use less points that this is very helpful because now the code will run more efficiently
+- 
