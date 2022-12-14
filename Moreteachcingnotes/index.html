@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -101,6 +101,7 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#unit-3-sections-14-and-15">Unit 3 Sections 14 and 15</a></li>
 <li class="toc-entry toc-h1"><a href="#simulations--unit-3-section-16">Simulations- Unit 3 Section 16</a></li>
+<li class="toc-entry toc-h1"><a href="#period-4-lesson-17-18">Period 4 Lesson 17-18</a></li>
 </ul><h1 id="unit-3-sections-14-and-15">
 <a class="anchor" href="#unit-3-sections-14-and-15" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 3 Sections 14 and 15</h1>
 
@@ -228,6 +229,69 @@ window.onload = wrap_img;
 <ul>
   <li>This code is random and uses the library random to pick random boxes creating random patterns</li>
   <li>this is another example of how a simulation can be used to represent cellular automaton</li>
+</ul>
+
+<h1 id="period-4-lesson-17-18">
+<a class="anchor" href="#period-4-lesson-17-18" aria-hidden="true"><span class="octicon octicon-link"></span></a>Period 4 Lesson 17-18</h1>
+
+<p>Undecidability: sometetimes we cannot tell if a certain number will follow the program guidlines
+for example the number example where you divide by 2 or times by 3 and add one. We have to ensure that all the numbers we put in are predictable</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="c1"># i is odd
+</span>            <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># i is even
+</span>            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">//</span><span class="mi">2</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+ 
+ 
+<span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Enter i: '</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Sequence: '</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="n">collatz</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+<p>This code print sout the hialstone numbers</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">collatz</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+             <span class="n">i</span> <span class="o">=</span><span class="p">((</span><span class="mi">3</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+             <span class="n">list_</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">list_</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">list_</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Please enter a number: '</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+        <span class="n">list_</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">break</span>
+    <span class="k">except</span> <span class="nb">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Invaid selection, try again: '</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+
+
+<span class="n">l</span> <span class="o">=</span> <span class="n">collatz</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Number of iterations:'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Collatz- The Collatz conjecture is one of the most famous unsolved problems in mathematics. The conjecture asks whether repeating two simple arithmetic operations will eventually transform every positive integer into 1.
+Undecidable problems gives yes or no but there is no code that can solve it on all inputs
+unsolvable problems, no algorithm can solve the problem
+Hailstone numbers are the output of the Collatz code.</p>
+
+<p>Unit 3, Section 17:</p>
+
+<ul>
+  <li>Algorithm efficieny is how many steps you have to use to solve a certain problem</li>
+  <li>by being very efficient you would use less points that this is very helpful because now the code will run more efficiently</li>
+  <li>
 </ul>
 
   </div><a class="u-url" href="/fastpages-APCSP/Moreteachcingnotes/" hidden></a>
