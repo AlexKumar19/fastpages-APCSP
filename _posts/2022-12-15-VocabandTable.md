@@ -11,15 +11,15 @@ permalink: /TableAndTeachingNotes/
 
 | Lesson               | Hacks       | Notes | Grades |
 | -----------          | ----------- | ----- | ---- |
-| Unit 3 Sections 1-2  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/3.1hacks/)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Lessonnotes/)      |   0.93     |
-| Unit 3 Sections 3-4  | N/A   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Lessonnotes/)      |   N/A     |
+| Unit 3 Sections 1-2  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/3.1hacks/)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Lessonnotes/)      |   1     |
+| Unit 3 Sections 3-4  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/33hacks/)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Lessonnotes/)      |   1     |
 | Unit 3 Sections 5-7  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/3.53.8hacks/)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Lessonnotes/)      |   0.9     |
-| Unit 3 Sections 8-10  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/csp/310hacks)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Lessonnotes/)      |   0.93     |
+| Unit 3 Sections 8-10  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/csp/310hacks)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Lessonnotes/)      |   1     |
 | Unit 3 Sections 9-11  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/csp/3111hacks)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Lessonnotes/)      |   0.93     |
 | Unit 3 Sections 12-13  | N/A   |  [Notes](https://davidvasilev1.github.io/group-tri2/2022/12/04/lesson3.12_3.13.html)      |   N/A     |
 | Unit 3 Sections 14-15  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/csp/39311hacks)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Moreteachcingnotes/)      |   0.9     |
 | Unit 3 Sections 16  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/csp/316hacks)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Moreteachcingnotes/)      |   0.9     |
-| Unit 3 Sections 17-18  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/csp/317hacks)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Moreteachcingnotes/)      |   0.9     |
+| Unit 3 Sections 17-18  | [Hacks](https://alexkumar19.github.io/fastpages-APCSP/csp/317hacks)   |  [Notes](https://alexkumar19.github.io/fastpages-APCSP/Moreteachcingnotes/)      |   N/A     |
 
 # Vocab
 
