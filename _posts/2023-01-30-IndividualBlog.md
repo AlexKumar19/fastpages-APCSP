@@ -2,7 +2,7 @@
 title: Individual Project Blog
 toc: true
 categories: [csp, jupyter]
-permalink: /csp/IndividualBlog
+permalink: /csp/IndividualBlog2
 categories: [csp, jupyter]
 tags: [python]
 ---
