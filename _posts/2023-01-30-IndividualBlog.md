@@ -1,8 +1,8 @@
 ---
 toc: true
 layout: post
-description: Individual Project Blog
-title: Intro to Engineering
+description: IndividualBlog2
+title: IndividualBlog2
 categories: [markdown, csp]
 permalink: /csp/IndividualBlog2/
 ---
