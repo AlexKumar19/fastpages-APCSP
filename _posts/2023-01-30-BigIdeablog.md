@@ -2,7 +2,7 @@
 title: Big Idea 5.1 and big Idea 5.2
 toc: true
 categories: [csp, jupyter]
-permalink: /csp/BigIdea5.1to5.2
+permalink: /csp/BigIdeablog123
 categories: [csp, jupyter, BigIdea]
 tags: [python]
 ---
