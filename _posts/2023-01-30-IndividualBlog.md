@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: IndividualBlog2
-title: IndividualBlog2
+title: IndividualBlog
 categories: [markdown, csp]
 permalink: /csp/IndividualBlog2/
 ---
