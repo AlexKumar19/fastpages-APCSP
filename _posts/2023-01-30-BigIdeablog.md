@@ -4,7 +4,6 @@ layout: post
 description: Big Idea 5.1 and big Idea 5.2
 title: Unit 3.3 & 3.4 Hacks
 categories: [markdown, csp]
-permalink: /csp/BigIdeablog123/
 ---
 
 1. Think of three beneficial effects of your projects based on 5.1 Unit
