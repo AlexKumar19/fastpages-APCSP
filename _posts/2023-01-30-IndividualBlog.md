@@ -1,12 +1,11 @@
 ---
-title: Individual Project Blog
 toc: true
-categories: [csp, jupyter]
-permalink: /csp/IndividualBlog2
-categories: [csp, jupyter]
-tags: [python]
+layout: post
+description: Individual Project Blog
+title: Intro to Engineering
+categories: [markdown, csp]
+permalink: /csp/IndividualBlog2/
 ---
-
 
 - Each individual preforms starts "pre-view" outline/write up of materials requried for College Board
   - For my video submission, in order to meet the College Board requirements for the Performance task, I need to show the input and output and the program working. I also need to show what is the purpose of the program and emphasize what the program does with the user input. I also need to have data abstraction in my program, this can be in the form of a list that stores the data of the user. In my video I also need to show off the use of sequencing selection and iteration for my algorithms in order to show off how I am using functions to simplifiy the process. I need to explain the algorithms in order to show off complexity
