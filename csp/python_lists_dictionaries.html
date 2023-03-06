@@ -1,65 +1,76 @@
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lists, Dictionaries, Iteration | Alex’s Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Lists, Dictionaries, Iteration" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}." />
+<meta property="og:description" content="An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}." />
+<link rel="canonical" href="https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries" />
+<meta property="og:url" content="https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries" />
+<meta property="og:site_name" content="Alex’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-05T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lists, Dictionaries, Iteration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-05T00:00:00-06:00","datePublished":"2023-03-05T00:00:00-06:00","description":"An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.","headline":"Lists, Dictionaries, Iteration","mainEntityOfPage":{"@type":"WebPage","@id":"https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries"},"url":"https://alexkumar19.github.io/fastpages-APCSP/csp/python_lists_dictionaries"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages-APCSP/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://alexkumar19.github.io/fastpages-APCSP/feed.xml" title="Alex's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages-APCSP/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Lists, Dictionaries, Iteration</h1><p class="page-description">An introduction to Data Abstraction using Python Lists [] and Python Dictionaries {}.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-05T00:00:00-06:00" itemprop="datePublished">
-        Mar 5, 2023
-      </time>
-       • <span class="read-time" title="Estimated read time">
-    
-    
-      5 min read
-    
-</span></p>
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
 
-    
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/fastpages-APCSP/categories/#csp">csp</a>
-        
-      
-      </p>
-    
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
 
-    
-      
-        <div class="pb-5 d-flex flex-justify-center">
-          <div class="px-2">
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages-APCSP/">Alex&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
 
-    <a href="https://github.com/AlexKumar19/fastpages-APCSP/tree/master/_notebooks/2022-8-31-Python-list-Dictionaries-Iteration.ipynb" role="button" target="_blank">
-<img class="notebook-badge-image" src="/fastpages-APCSP/assets/badges/github.svg" alt="View On GitHub">
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/AlexKumar19/fastpages-APCSP/master?filepath=_notebooks%2F2022-8-31-Python-list-Dictionaries-Iteration.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/fastpages-APCSP/assets/badges/binder.svg" alt="Open In Binder"/>
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://colab.research.google.com/github/AlexKumar19/fastpages-APCSP/blob/master/_notebooks/2022-8-31-Python-list-Dictionaries-Iteration.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/fastpages-APCSP/assets/badges/colab.svg" alt="Open In Colab"/>
-    </a>
-</div>
-          <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FAlexKumar19%2Ffastpages-APCSP%2Fblob%2Fmaster%2F_notebooks%2F2022-8-31-Python-list-Dictionaries-Iteration.ipynb" target="_blank">
-      <img class="notebook-badge-image" src="/fastpages-APCSP/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
-  </a>
-</div>
-
-        </div>
-      </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Defining-InfoDb-with-extra-entries">Defining InfoDb with extra entries </a></li>
-<li class="toc-entry toc-h1"><a href="#For-loop-to-print-out-InfoDb">For loop to print out InfoDb </a></li>
-<li class="toc-entry toc-h1"><a href="#While-loop-to-print-out-InfoDb">While loop to print out InfoDb </a></li>
-<li class="toc-entry toc-h1"><a href="#for-loop-with-index-to-print-out-InfoDb">for loop with index to print out InfoDb </a></li>
-<li class="toc-entry toc-h1"><a href="#Recursion-to-print-out-all-of-InfoDb">Recursion to print out all of InfoDb </a></li>
-<li class="toc-entry toc-h1"><a href="#Outputting-data-in-Reverse-Order">Outputting data in Reverse Order </a></li>
-<li class="toc-entry toc-h1"><a href="#Quiz-That-stores-into-a-dictionary">Quiz That stores into a dictionary </a></li>
-</ul><!--
+        <div class="trigger"><a class="page-link" href="/fastpages-APCSP/search/">Search</a><a class="page-link" href="/fastpages-APCSP/categories/">Tags</a><a class="page-link" href="/fastpages-APCSP/notes/">notes</a><a class="page-link" href="/fastpages-APCSP/about/">About Me</a><a class="page-link" href="/fastpages-APCSP/HTMLTable/">HTML and Javascript table</a><a class="page-link" href="/fastpages-APCSP/APIpractice/">API</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -68,13 +79,9 @@
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Defining-InfoDb-with-extra-entries">
-<a class="anchor" href="#Defining-InfoDb-with-extra-entries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Defining InfoDb with extra entries<a class="anchor-link" href="#Defining-InfoDb-with-extra-entries"> </a>
-</h1>
-<p>Purpose of this cell is to define InfoDb and add entries about certain people and traits that they have</p>
+<h1 id="Defining-InfoDb-with-extra-entries">Defining InfoDb with extra entries<a class="anchor-link" href="#Defining-InfoDb-with-extra-entries"> </a></h1><p>Purpose of this cell is to define InfoDb and add entries about certain people and traits that they have</p>
 
 </div>
 </div>
@@ -92,41 +99,41 @@
 
 <span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"samit"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"poojary"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"September 15"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"samit.poojary@gmail.com"</span><span class="p">,</span>
-    <span class="s2">"Phone"</span><span class="p">:</span> <span class="s2">"iphone"</span>
+    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;samit&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;poojary&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DOB&quot;</span><span class="p">:</span> <span class="s2">&quot;September 15&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Residence&quot;</span><span class="p">:</span> <span class="s2">&quot;San Diego&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;samit.poojary@gmail.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;iphone&quot;</span>
 <span class="p">})</span>
 
 <span class="c1">#adding extra records to InfoDb</span>
 
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Safin"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Singh"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"July 13"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"safin.singh@gmail.com"</span><span class="p">,</span>
-    <span class="s2">"Phone"</span><span class="p">:</span> <span class="s2">"android"</span>
+    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Safin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Singh&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DOB&quot;</span><span class="p">:</span> <span class="s2">&quot;July 13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Residence&quot;</span><span class="p">:</span> <span class="s2">&quot;San Diego&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;safin.singh@gmail.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;android&quot;</span>
 <span class="p">})</span>
 <span class="c1"># adding extra records</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Alex"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kumar"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"May 9"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"alex.k.kumar@gmail.com"</span><span class="p">,</span>
-    <span class="s2">"Phone"</span><span class="p">:</span> <span class="s2">"iphone"</span>
+    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Alex&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Kumar&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DOB&quot;</span><span class="p">:</span> <span class="s2">&quot;May 9&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Residence&quot;</span><span class="p">:</span> <span class="s2">&quot;San Diego&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;alex.k.kumar@gmail.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;iphone&quot;</span>
 <span class="p">})</span>
 <span class="c1"># Adding one extra item to InfoDb</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Maxie"</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kumar"</span><span class="p">,</span>
-    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"November 5"</span><span class="p">,</span>
-    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"maxie.kumar@gmail.com"</span><span class="p">,</span>
-    <span class="s2">"Phone"</span><span class="p">:</span> <span class="s2">"no phone"</span>
+    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Maxie&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Kumar&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DOB&quot;</span><span class="p">:</span> <span class="s2">&quot;November 5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Residence&quot;</span><span class="p">:</span> <span class="s2">&quot;San Diego&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;maxie.kumar@gmail.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Phone&quot;</span><span class="p">:</span> <span class="s2">&quot;no phone&quot;</span>
 <span class="p">})</span>
 </pre></div>
 
@@ -137,13 +144,9 @@
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="For-loop-to-print-out-InfoDb">
-<a class="anchor" href="#For-loop-to-print-out-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>For loop to print out InfoDb<a class="anchor-link" href="#For-loop-to-print-out-InfoDb"> </a>
-</h1>
-<p>Purpose of this independent cell is to use a normal loop that goes through Infodb printint out all the entries. The for loop automates the process so we do not have to manually print out all the enries by hand.</p>
+<h1 id="For-loop-to-print-out-InfoDb">For loop to print out InfoDb<a class="anchor-link" href="#For-loop-to-print-out-InfoDb"> </a></h1><p>Purpose of this independent cell is to use a normal loop that goes through Infodb printint out all the entries. The for loop automates the process so we do not have to manually print out all the enries by hand.</p>
 
 </div>
 </div>
@@ -157,7 +160,7 @@
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span>
     <span class="c1">#print function that goes through and formats</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">item</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"DOB:"</span><span class="p">,</span> <span class="n">item</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">item</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Email: "</span><span class="p">,</span> <span class="n">item</span><span class="p">[</span><span class="s2">"Email"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Phone: "</span> <span class="p">,</span><span class="n">item</span><span class="p">[</span><span class="s2">"Phone"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;FirstName&quot;</span><span class="p">],</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;LastName&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;DOB:&quot;</span><span class="p">,</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;DOB&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Residence:&quot;</span><span class="p">,</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;Residence&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Email: &quot;</span><span class="p">,</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;Email&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Phone: &quot;</span> <span class="p">,</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;Phone&quot;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -200,13 +203,9 @@ Maxie Kumar
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="While-loop-to-print-out-InfoDb">
-<a class="anchor" href="#While-loop-to-print-out-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>While loop to print out InfoDb<a class="anchor-link" href="#While-loop-to-print-out-InfoDb"> </a>
-</h1>
-<p>The purpose of this independent cell block is use a while loop to go print out InfoDb while a certain variable is less than the length of InfoDb. This allows us to print out the data without manually inputting the values to the console</p>
+<h1 id="While-loop-to-print-out-InfoDb">While loop to print out InfoDb<a class="anchor-link" href="#While-loop-to-print-out-InfoDb"> </a></h1><p>The purpose of this independent cell block is use a while loop to go print out InfoDb while a certain variable is less than the length of InfoDb. This allows us to print out the data without manually inputting the values to the console</p>
 
 </div>
 </div>
@@ -224,7 +223,7 @@ Maxie Kumar
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
     <span class="c1">#while i is less than the number or the length of InfoDb, it prints out the data in InfoDb</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"LastName"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"DOB:"</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"DOB"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Residence"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Email: "</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Email"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Phone: "</span> <span class="p">,</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Phone"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;FirstName&quot;</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;LastName&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;DOB:&quot;</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;DOB&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Residence:&quot;</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Residence&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Email: &quot;</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Email&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Phone: &quot;</span> <span class="p">,</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Phone&quot;</span><span class="p">])</span>
     <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
 </pre></div>
 
@@ -268,13 +267,9 @@ Maxie Kumar
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="for-loop-with-index-to-print-out-InfoDb">
-<a class="anchor" href="#for-loop-with-index-to-print-out-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>for loop with index to print out InfoDb<a class="anchor-link" href="#for-loop-with-index-to-print-out-InfoDb"> </a>
-</h1>
-<p>The purpose of this independent code cell is to use a for loop with an index that will go over all the data in infoDB without having to manually print out every single statement. The for loop will repeat the print function for every single entry in InfoDb</p>
+<h1 id="for-loop-with-index-to-print-out-InfoDb">for loop with index to print out InfoDb<a class="anchor-link" href="#for-loop-with-index-to-print-out-InfoDb"> </a></h1><p>The purpose of this independent code cell is to use a for loop with an index that will go over all the data in infoDB without having to manually print out every single statement. The for loop will repeat the print function for every single entry in InfoDb</p>
 
 </div>
 </div>
@@ -288,7 +283,7 @@ Maxie Kumar
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)):</span>
     <span class="c1">#prints out the items for every i in the InfoDb</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"LastName"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"DOB:"</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"DOB"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Residence"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Email: "</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Email"</span><span class="p">],</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Phone: "</span> <span class="p">,</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Phone"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;FirstName&quot;</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;LastName&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;DOB:&quot;</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;DOB&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Residence:&quot;</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Residence&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Email: &quot;</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Email&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Phone: &quot;</span> <span class="p">,</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Phone&quot;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -331,13 +326,9 @@ Maxie Kumar
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Recursion-to-print-out-all-of-InfoDb">
-<a class="anchor" href="#Recursion-to-print-out-all-of-InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursion to print out all of InfoDb<a class="anchor-link" href="#Recursion-to-print-out-all-of-InfoDb"> </a>
-</h1>
-<p>This recursion which utilizes a function to print out all the data in InfoDb is used to automate the printint process so we will not have to manually print out every single line. It uses a function that also uses embedded if statements that also calls itself at the end. This allows us to go over every single entry inside of InfoDb.</p>
+<h1 id="Recursion-to-print-out-all-of-InfoDb">Recursion to print out all of InfoDb<a class="anchor-link" href="#Recursion-to-print-out-all-of-InfoDb"> </a></h1><p>This recursion which utilizes a function to print out all the data in InfoDb is used to automate the printint process so we will not have to manually print out every single line. It uses a function that also uses embedded if statements that also calls itself at the end. This allows us to go over every single entry inside of InfoDb.</p>
 
 </div>
 </div>
@@ -355,12 +346,12 @@ Maxie Kumar
 <span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span> <span class="k">return</span>
     <span class="c1">#format string to output InfoDb in an organized foramt</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"></span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">     DOB: </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">     Residence: </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">     Email: </span><span class="si">{}</span><span class="s2"></span>
 <span class="s2">     Phone: </span><span class="si">{}</span><span class="s2"></span>
-<span class="s2">    """</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"LastName"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"DOB"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Residence"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Email"</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">"Phone"</span><span class="p">]))</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;FirstName&quot;</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;LastName&quot;</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;DOB&quot;</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Residence&quot;</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Email&quot;</span><span class="p">],</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Phone&quot;</span><span class="p">]))</span>
     <span class="c1">#recalls the function output to go over every single person in InfoDb</span>
     <span class="n">output</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
 <span class="n">output</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -410,12 +401,9 @@ Maxie Kumar
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Outputting-data-in-Reverse-Order">
-<a class="anchor" href="#Outputting-data-in-Reverse-Order" aria-hidden="true"><span class="octicon octicon-link"></span></a>Outputting data in Reverse Order<a class="anchor-link" href="#Outputting-data-in-Reverse-Order"> </a>
-</h1>
+<h1 id="Outputting-data-in-Reverse-Order">Outputting data in Reverse Order<a class="anchor-link" href="#Outputting-data-in-Reverse-Order"> </a></h1>
 </div>
 </div>
 </div>
@@ -426,7 +414,7 @@ Maxie Kumar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Names_of_basketball_players</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Lebron James"</span><span class="p">,</span> <span class="s2">"Kobe Bryant"</span><span class="p">,</span> <span class="s2">"Chris Paul"</span><span class="p">,</span> <span class="s2">"Kevin Durant"</span><span class="p">,</span> <span class="s2">"Jason Tatum"</span><span class="p">,</span> <span class="s2">"Paul George"</span><span class="p">,</span> <span class="s2">"Kyrie Irving"</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Names_of_basketball_players</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Lebron James&quot;</span><span class="p">,</span> <span class="s2">&quot;Kobe Bryant&quot;</span><span class="p">,</span> <span class="s2">&quot;Chris Paul&quot;</span><span class="p">,</span> <span class="s2">&quot;Kevin Durant&quot;</span><span class="p">,</span> <span class="s2">&quot;Jason Tatum&quot;</span><span class="p">,</span> <span class="s2">&quot;Paul George&quot;</span><span class="p">,</span> <span class="s2">&quot;Kyrie Irving&quot;</span><span class="p">]</span>
 <span class="c1">#prints the list out in reverse order</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Names_of_basketball_players</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
@@ -441,7 +429,7 @@ Maxie Kumar
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>['Kyrie Irving', 'Paul George', 'Jason Tatum', 'Kevin Durant', 'Chris Paul', 'Kobe Bryant', 'Lebron James']
+<pre>[&#39;Kyrie Irving&#39;, &#39;Paul George&#39;, &#39;Jason Tatum&#39;, &#39;Kevin Durant&#39;, &#39;Chris Paul&#39;, &#39;Kobe Bryant&#39;, &#39;Lebron James&#39;]
 </pre>
 </div>
 </div>
@@ -452,13 +440,9 @@ Maxie Kumar
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Quiz-That-stores-into-a-dictionary">
-<a class="anchor" href="#Quiz-That-stores-into-a-dictionary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz That stores into a dictionary<a class="anchor-link" href="#Quiz-That-stores-into-a-dictionary"> </a>
-</h1>
-<p>The purpose of this code block is to test for basic animal trivia and it does this through multiple functions that stores the answers and questions in a dictionary. It calls back to the dictionary using for loops and then embedded whithin the for loops, it calls back to the function to print out the question and take input.</p>
+<h1 id="Quiz-That-stores-into-a-dictionary">Quiz That stores into a dictionary<a class="anchor-link" href="#Quiz-That-stores-into-a-dictionary"> </a></h1><p>The purpose of this code block is to test for basic animal trivia and it does this through multiple functions that stores the answers and questions in a dictionary. It calls back to the dictionary using for loops and then embedded whithin the for loops, it calls back to the function to print out the question and take input.</p>
 
 </div>
 </div>
@@ -471,26 +455,26 @@ Maxie Kumar
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">question_and_answers</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span> <span class="c1">#function that prints out the question and takes in input</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="nb">input</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="nb">input</span><span class="p">)</span> 
 
 <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#percent correct variable</span>
 
 <span class="c1">#dictionary with answers</span>
-<span class="n">questions_answers</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"Whats the largest mammal"</span> <span class="p">:</span> <span class="s2">"blue whale"</span><span class="p">,</span> 
-                     <span class="s2">"whats the fastest animal"</span> <span class="p">:</span> <span class="s2">"cheetah"</span><span class="p">,</span> 
-                     <span class="s2">"what color is a flamingo"</span> <span class="p">:</span> <span class="s2">"pink"</span><span class="p">,</span>
-                     <span class="s2">"Whats is the tallest animal"</span> <span class="p">:</span> <span class="s2">"giraffe"</span><span class="p">}]</span>
+<span class="n">questions_answers</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;Whats the largest mammal&quot;</span> <span class="p">:</span> <span class="s2">&quot;blue whale&quot;</span><span class="p">,</span> 
+                     <span class="s2">&quot;whats the fastest animal&quot;</span> <span class="p">:</span> <span class="s2">&quot;cheetah&quot;</span><span class="p">,</span> 
+                     <span class="s2">&quot;what color is a flamingo&quot;</span> <span class="p">:</span> <span class="s2">&quot;pink&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;Whats is the tallest animal&quot;</span> <span class="p">:</span> <span class="s2">&quot;giraffe&quot;</span><span class="p">}]</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">questions_answers</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">question</span><span class="p">,</span> <span class="n">answer</span> <span class="ow">in</span> <span class="n">i</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">question_and_answers</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="c1"># calls back to the questionanswer function</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Answer: "</span><span class="p">)</span> <span class="c1"># variable that connects to the user's input</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Answer: &quot;</span><span class="p">)</span> <span class="c1"># variable that connects to the user&#39;s input</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>  <span class="c1"># if the answer provided is correct</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">"is correct"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">&quot;is correct&quot;</span><span class="p">)</span>
             <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">else</span><span class="p">:</span>  <span class="c1"># if the answer provided is wrong</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">"is wrong"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="mi">4</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="s2">"%"</span><span class="p">)</span> <span class="c1">#outputs the correct variable as a percentage</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s2">&quot;is wrong&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="mi">4</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span> <span class="c1">#outputs the correct variable as a percentage</span>
 </pre></div>
 
     </div>
@@ -526,13 +510,33 @@ giraffe is correct
 
 
 
-  </div><!-- from https://github.com/utterance/utterances -->
-<script src="https://utteranc.es/client.js"
-        repo="AlexKumar19/fastpages-APCSP"
-        issue-term="title"
-        label="blogpost-comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script><a class="u-url" href="/fastpages-APCSP/csp/python_lists_dictionaries" hidden></a>
-</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages-APCSP/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://alexkumar19.github.io/fastpages-APCSP/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages-APCSP/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
