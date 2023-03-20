@@ -126,7 +126,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
-<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;instance/sqlite.db&#39;</span> <span class="c1"># this is location of database</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;instance/sqlite1.db&#39;</span> <span class="c1"># this is location of database</span>
 
 <span class="k">def</span> <span class="nf">schema</span><span class="p">():</span>
     
@@ -150,6 +150,24 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(0, &#39;id&#39;, &#39;INTEGER&#39;, 1, None, 1)
+(1, &#39;_name&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(2, &#39;_uid&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(3, &#39;_password&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(4, &#39;_dob&#39;, &#39;DATE&#39;, 0, None, 0)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -196,7 +214,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Execute a SELECT statement to retrieve data from a table</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -221,23 +239,14 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 24&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20&#39;&gt;21&lt;/a&gt;</span>     cursor.close()
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=21&#39;&gt;22&lt;/a&gt;</span>     conn.close()
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=23&#39;&gt;24&lt;/a&gt;</span> read()
-
-<span class="ansi-green-intense-fg ansi-bold">/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb Cell 6</span> in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> cursor = conn.cursor()
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span> # Execute a SELECT statement to retrieve data from a table
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span> results = cursor.execute(&#39;SELECT * FROM users2&#39;).fetchall()
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span> # Print the results
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13&#39;&gt;14&lt;/a&gt;</span> if len(results) == 0:
-
-<span class="ansi-red-fg">OperationalError</span>: no such table: users2</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, &#39;Thomas Edison&#39;, &#39;toby&#39;, &#39;sha256$Hy1fgsUrtLQyLFiH$3cc83ddb860b8d0280bd58777f499233b49938f866621f2c2f8d3f89387d21cd&#39;, &#39;1847-02-11&#39;)
+(2, &#39;Nikola Tesla&#39;, &#39;niko&#39;, &#39;sha256$P90Vru6IpHL7U63y$006c43d8ab5a908b3efd46b2a7868fc775afb6824d90aa78f397e49b64406fc8&#39;, &#39;2023-03-19&#39;)
+(3, &#39;Alexander Graham Bell&#39;, &#39;lex&#39;, &#39;sha256$N3WXOyCsMWK2U1aH$12aa4bac51817a5bc267bce2f0ea8e2c0f838b6519f9a89a2f0c8a8380fa346f&#39;, &#39;2023-03-19&#39;)
+(4, &#39;Eli Whitney&#39;, &#39;whit&#39;, &#39;sha256$tlXlHcOJONoIQBCN$bfe767ff69482666be328ccb0066e22df2211b9b65b5d9e4a6077f6695f58b40&#39;, &#39;2023-03-19&#39;)
+(5, &#39;Indiana Jones&#39;, &#39;indi&#39;, &#39;sha256$JEr0jrGsiNOUAL5w$c9b2e9f38f5cb16e5159f9a59f55fce471207fe5e2fc95fc55c595ad044280eb&#39;, &#39;1920-10-21&#39;)
+(6, &#39;Marion Ravenwood&#39;, &#39;raven&#39;, &#39;sha256$2U5NaLM79LSEezIj$2902b375a8637c42351cdac4ba1859d8e3a1eb2f2a32b38eefcebbb08c548041&#39;, &#39;1921-10-21&#39;)
+</pre>
 </div>
 </div>
 
@@ -251,8 +260,11 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db<a class="anchor-link" href="#Create-a-new-User-in-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses SQL INSERT to add row</p>
 <ul>
-<li>Compore create() in both SQL lessons.  What is better or worse in the two implementations?</li>
-<li>Explain purpose of SQL INSERT.   Is this the same as User <strong>init</strong>?</li>
+<li>Compore create() in both SQL lessons.  What is better or worse in the two implementations?<ul>
+<li>I think that I like the OOP better as I have had more practice with it however the new way of user the cursor method does seem simple</li>
+</ul>
+</li>
+<li><h2 id="Explain-purpose-of-SQL-INSERT.---Is-this-the-same-as-User-init?">Explain purpose of SQL INSERT.   Is this the same as User <strong>init</strong>?<a class="anchor-link" href="#Explain-purpose-of-SQL-INSERT.---Is-this-the-same-as-User-init?"> </a></h2></li>
 </ul>
 </blockquote>
 
@@ -309,7 +321,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>A new user record 15 has been created
+<pre>A new user record  has been created
 </pre>
 </div>
 </div>
@@ -325,8 +337,14 @@ window.onload = wrap_img;
 <h2 id="Updating-a-User-in-table-in-Sqlite.db">Updating a User in table in Sqlite.db<a class="anchor-link" href="#Updating-a-User-in-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses SQL UPDATE to modify password</p>
 <ul>
 <li>What does the hacked part do?</li>
-<li>Explain try/except, when would except occur?</li>
-<li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
+<li>Explain try/except, when would except occur?<ul>
+<li>The except woould happen if there is an error and it will output the error message</li>
+</ul>
+</li>
+<li>What code seems to be repeated in each of these examples to point, why is it repeated?<ul>
+<li>The committing is getting repeated</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
@@ -402,8 +420,14 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Delete-a-User-in-table-in-Sqlite.db">Delete a User in table in Sqlite.db<a class="anchor-link" href="#Delete-a-User-in-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses a delete function to remove a user based on a user input of the id.</p>
 <ul>
-<li>Is DELETE a dangerous operation?  Why?</li>
-<li>In the print statemements, what is the "f" and what does {uid} do?</li>
+<li>Is DELETE a dangerous operation?  Why?<ul>
+<li>Yes beause if it doesnt work properly it could damage the db</li>
+</ul>
+</li>
+<li>In the print statemements, what is the "f" and what does {uid} do?<ul>
+<li>The f makes it a format string and prints out the message</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
@@ -458,8 +482,14 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Menu-Interface-to-CRUD-operations">Menu Interface to CRUD operations<a class="anchor-link" href="#Menu-Interface-to-CRUD-operations"> </a></h1><blockquote><p>CRUD and Schema interactions from one location by running menu. Observe input at the top of VSCode, observe output underneath code cell.</p>
 <ul>
-<li>Why does the menu repeat?</li>
-<li>Could you refactor this menu?  Make it work with a List?</li>
+<li>Why does the menu repeat?<ul>
+<li>The menu repats the function by lower the letters as well</li>
+</ul>
+</li>
+<li>Could you refactor this menu?  Make it work with a List?<ul>
+<li>Yes this could work with a list comparing the input to a function then runnning the function</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 

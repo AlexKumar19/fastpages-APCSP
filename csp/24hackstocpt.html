@@ -382,10 +382,13 @@ new DB
 <div class="output_text output_subarea output_execute_result">
 <pre>[{&#39;id&#39;: 1, &#39;task&#39;: &#39;Farming&#39;, &#39;timeExpected&#39;: &#39;13 minutes&#39;},
  {&#39;id&#39;: 2, &#39;task&#39;: &#39;Track&#39;, &#39;timeExpected&#39;: &#39;51 minutes&#39;},
- {&#39;id&#39;: 3, &#39;task&#39;: &#39;math hw&#39;, &#39;timeExpected&#39;: &#39;16 minutes&#39;},
  {&#39;id&#39;: 4, &#39;task&#39;: &#39;CSP hw&#39;, &#39;timeExpected&#39;: &#39;17 minutes&#39;},
- {&#39;id&#39;: 5, &#39;task&#39;: &#39;Swim&#39;, &#39;timeExpected&#39;: &#39;15 minutes&#39;},
- {&#39;id&#39;: 6, &#39;task&#39;: &#39;Drawing&#39;, &#39;timeExpected&#39;: &#39;55 minutes&#39;}]</pre>
+ {&#39;id&#39;: 5, &#39;task&#39;: &#39;jumping&#39;, &#39;timeExpected&#39;: &#39;15 minutes&#39;},
+ {&#39;id&#39;: 6, &#39;task&#39;: &#39;Drawing&#39;, &#39;timeExpected&#39;: &#39;55 minutes&#39;},
+ {&#39;id&#39;: 7, &#39;task&#39;: &#39;bowling&#39;, &#39;timeExpected&#39;: &#39;20&#39;},
+ {&#39;id&#39;: 8, &#39;task&#39;: &#39;jumprope&#39;, &#39;timeExpected&#39;: &#39;19&#39;},
+ {&#39;id&#39;: 9, &#39;task&#39;: &#39;bathroom&#39;, &#39;timeExpected&#39;: &#39;10&#39;},
+ {&#39;id&#39;: 10, &#39;task&#39;: &#39;code&#39;, &#39;timeExpected&#39;: &#39;15&#39;}]</pre>
 </div>
 
 </div>
@@ -426,6 +429,33 @@ new DB
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb Cell 8</span> in <span class="ansi-cyan-fg">&lt;cell line: 20&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14&#39;&gt;15&lt;/a&gt;</span>     return json_ready
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=16&#39;&gt;17&lt;/a&gt;</span> read()
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=19&#39;&gt;20&lt;/a&gt;</span> updateuser()
+
+<span class="ansi-green-intense-fg ansi-bold">/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb Cell 8</span> in <span class="ansi-cyan-fg">updateuser</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span> with app.app_context():
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     user = User.query.filter_by(id=id2).first()
+<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>     user.update(task=task2)
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     db.session.commit()
+
+<span class="ansi-red-fg">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;update&#39;</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -476,10 +506,24 @@ new DB
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Created
- {&#39;id&#39;: 7, &#39;task&#39;: &#39;bowling&#39;, &#39;timeExpected&#39;: &#39;20&#39;}
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb Cell 9</span> in <span class="ansi-cyan-fg">&lt;cell line: 27&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=23&#39;&gt;24&lt;/a&gt;</span>         except:  # error raised if object not created
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=24&#39;&gt;25&lt;/a&gt;</span>             print(&#34;Unknown error uid {uid}&#34;)
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=26&#39;&gt;27&lt;/a&gt;</span> create()
+
+<span class="ansi-green-intense-fg ansi-bold">/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb Cell 9</span> in <span class="ansi-cyan-fg">create</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1&#39;&gt;2&lt;/a&gt;</span> def create():
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span>     # optimize user time to see if uid exists
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span>     task = input(&#34;Enter your task&#34;)
+<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span>     user = find_by_task(task)
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     try:
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-17-2.4Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>         print(&#34;Found\n&#34;, user.read())
+
+<span class="ansi-red-fg">NameError</span>: name &#39;find_by_task&#39; is not defined</pre>
 </div>
 </div>
 
@@ -540,7 +584,8 @@ new DB
  {&#39;id&#39;: 5, &#39;task&#39;: &#39;jumping&#39;, &#39;timeExpected&#39;: &#39;15 minutes&#39;},
  {&#39;id&#39;: 6, &#39;task&#39;: &#39;Drawing&#39;, &#39;timeExpected&#39;: &#39;55 minutes&#39;},
  {&#39;id&#39;: 7, &#39;task&#39;: &#39;bowling&#39;, &#39;timeExpected&#39;: &#39;20&#39;},
- {&#39;id&#39;: 8, &#39;task&#39;: &#39;jumprope&#39;, &#39;timeExpected&#39;: &#39;19&#39;}]</pre>
+ {&#39;id&#39;: 8, &#39;task&#39;: &#39;jumprope&#39;, &#39;timeExpected&#39;: &#39;19&#39;},
+ {&#39;id&#39;: 9, &#39;task&#39;: &#39;bathroom&#39;, &#39;timeExpected&#39;: &#39;10&#39;}]</pre>
 </div>
 
 </div>
