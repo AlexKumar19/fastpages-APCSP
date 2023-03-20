@@ -153,24 +153,6 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(0, &#39;id&#39;, &#39;INTEGER&#39;, 1, None, 1)
-(1, &#39;_name&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
-(2, &#39;_uid&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
-(3, &#39;_password&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
-(4, &#39;_dob&#39;, &#39;DATE&#39;, 0, None, 0)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -179,10 +161,19 @@ window.onload = wrap_img;
 <h2 id="Reading-Users-table-in-Sqlite.db">Reading Users table in Sqlite.db<a class="anchor-link" href="#Reading-Users-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses SQL SELECT statement to read data</p>
 </blockquote>
 <ul>
-<li>What is a connection object?  After you google it, what do you think it does?</li>
-<li>Same for cursor object?</li>
-<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</li>
-<li>Is "results" an object?  How do you know?</li>
+<li>What is a connection object?  After you google it, what do you think it does?<ul>
+<li>I think that the connection object connects the user to the db</li>
+</ul>
+</li>
+<li>Same for cursor object?<ul>
+<li>allows user to go to individual rows</li>
+</ul>
+</li>
+<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?<ul>
+<li>There are many attributes in the debugger menu some things that we can see is the data per user</li>
+</ul>
+</li>
+<li>Is "results" an object?  How do you know?<h2 id="--Results-is-an-object-as-it-has-funcitons-and-variables">- Results is an object as it has funcitons and variables<a class="anchor-link" href="#--Results-is-an-object-as-it-has-funcitons-and-variables"> </a></h2></li>
 </ul>
 
 </div>
@@ -205,7 +196,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Execute a SELECT statement to retrieve data from a table</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -230,16 +221,23 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, &#39;Thomas Edison&#39;, &#39;toby&#39;, &#39;sha256$P6bYSHBhIPCvZes5$d023ab574a8e8f39249dddab0871e504ce70a26d92b951f9075e04b837c2e563&#39;, &#39;1847-02-11&#39;)
-(2, &#39;Nikola Tesla&#39;, &#39;niko&#39;, &#39;sha256$EelEuFI8O8AJ0CbA$6c1bf82f03ef89fe77e72e27ba46f4b518b2a9a085ab81b87a236162af65c873&#39;, &#39;2023-03-16&#39;)
-(3, &#39;Alexander Graham Bell&#39;, &#39;lex&#39;, &#39;sha256$UkCSrTDd0K9frnNA$c49478c9d697425fe7dfebcaf406d1b344fe66059d2983778c993794d0ebef20&#39;, &#39;2023-03-16&#39;)
-(4, &#39;Eli Whitney&#39;, &#39;whit&#39;, &#39;sha256$wB6WBIi8nm8egabE$1779947084eb70c8ee99953f11ea0edfeb031d07c76e5c8760bfd8dec19ede73&#39;, &#39;2023-03-16&#39;)
-(5, &#39;Indiana Jones&#39;, &#39;indi&#39;, &#39;sha256$ZT7Ld54b0mCuvHiE$d5352499d56aedc0f99e36e2f0ca222ff3787185e60f16a279c7badc641402e3&#39;, &#39;1920-10-21&#39;)
-(6, &#39;Marion Ravenwood&#39;, &#39;raven&#39;, &#39;sha256$QSMvq4uxS2B8jOcD$265dde28ad8051e0eb62b0454206120eef8209e77c5bbfe0d1d098914f69bff0&#39;, &#39;1921-10-21&#39;)
-(7, &#39;&#39;, &#39;&#39;, &#39;sha256$vE4eNGXDN06y5z9G$6776d90abcaad9a11c422e35814ab99ba8752423375f6ef172c8f3ee82870a02&#39;, &#39;2023-03-16&#39;)
-(8, &#39;Alex&#39;, &#39;15&#39;, &#39;teehee&#39;, &#39;2000-15-10&#39;)
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 24&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20&#39;&gt;21&lt;/a&gt;</span>     cursor.close()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=21&#39;&gt;22&lt;/a&gt;</span>     conn.close()
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=23&#39;&gt;24&lt;/a&gt;</span> read()
+
+<span class="ansi-green-intense-fg ansi-bold">/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb Cell 6</span> in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> cursor = conn.cursor()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span> # Execute a SELECT statement to retrieve data from a table
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span> results = cursor.execute(&#39;SELECT * FROM users2&#39;).fetchall()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span> # Print the results
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/alexkumar/vscode/fastpages-APCSP/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13&#39;&gt;14&lt;/a&gt;</span> if len(results) == 0:
+
+<span class="ansi-red-fg">OperationalError</span>: no such table: users2</pre>
 </div>
 </div>
 

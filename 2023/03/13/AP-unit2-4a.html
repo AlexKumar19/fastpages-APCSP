@@ -141,7 +141,7 @@ window.onload = wrap_img;
 <span class="c1"># Setup of key Flask object (app)</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
-<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///sqlite.db&#39;</span>  <span class="c1"># path and filename of database</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///sqlite1.db&#39;</span>  <span class="c1"># path and filename of database</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_TRACK_MODIFICATIONS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">database</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SECRET_KEY&#39;</span>
@@ -634,17 +634,17 @@ Created
  {&#39;id&#39;: 2,
   &#39;name&#39;: &#39;Nikola Tesla&#39;,
   &#39;uid&#39;: &#39;niko&#39;,
-  &#39;dob&#39;: &#39;03-17-2023&#39;,
+  &#39;dob&#39;: &#39;03-19-2023&#39;,
   &#39;age&#39;: 0},
  {&#39;id&#39;: 3,
   &#39;name&#39;: &#39;Alexander Graham Bell&#39;,
   &#39;uid&#39;: &#39;lex&#39;,
-  &#39;dob&#39;: &#39;03-17-2023&#39;,
+  &#39;dob&#39;: &#39;03-19-2023&#39;,
   &#39;age&#39;: 0},
  {&#39;id&#39;: 4,
   &#39;name&#39;: &#39;Eli Whitney&#39;,
   &#39;uid&#39;: &#39;whit&#39;,
-  &#39;dob&#39;: &#39;03-17-2023&#39;,
+  &#39;dob&#39;: &#39;03-19-2023&#39;,
   &#39;age&#39;: 0},
  {&#39;id&#39;: 5,
   &#39;name&#39;: &#39;Indiana Jones&#39;,
@@ -655,8 +655,7 @@ Created
   &#39;name&#39;: &#39;Marion Ravenwood&#39;,
   &#39;uid&#39;: &#39;raven&#39;,
   &#39;dob&#39;: &#39;10-21-1921&#39;,
-  &#39;age&#39;: 101},
- {&#39;id&#39;: 7, &#39;name&#39;: &#39;&#39;, &#39;uid&#39;: &#39;&#39;, &#39;dob&#39;: &#39;03-17-2023&#39;, &#39;age&#39;: 0}]</pre>
+  &#39;age&#39;: 101}]</pre>
 </div>
 
 </div>
