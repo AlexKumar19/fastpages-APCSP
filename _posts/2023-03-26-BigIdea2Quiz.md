@@ -9,7 +9,7 @@ permalink: /csp/BigIdea2quizandcorrection/
 
 # Review For Big Idea 2 Quiz
 - Here is my score for this quiz 
-![]({{site.baseurl}}/images/BigIdea2quiz2.png)
+![]({{site.baseurl}}/images/BigIdea2Quiz2.png)
 - For this quiz I got a 22/25 making a few minor errors
 - Some of the skills assessed in the quiz include filtering and sorting data, counting items in a dataset, and identifying advantages of lossless over lossy compression.
 - This quiz covers various topics related to data analysis and management, including compression algorithms, analyzing different types of data, using spreadsheets and databases, and working with binary numbers. 
