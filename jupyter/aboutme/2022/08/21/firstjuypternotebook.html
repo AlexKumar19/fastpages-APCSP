@@ -150,6 +150,48 @@ window.onload = wrap_img;
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://open-weather13.p.rapidapi.com/city/landon&quot;</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">&quot;X-RapidAPI-Key&quot;</span><span class="p">:</span> <span class="s2">&quot;f8c1edc71amsh2ceb94e75170cf3p1172ddjsn28d9990da6a6&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;X-RapidAPI-Host&quot;</span><span class="p">:</span> <span class="s2">&quot;open-weather13.p.rapidapi.com&quot;</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#34;coord&#34;:{&#34;lon&#34;:-89.1028,&#34;lat&#34;:30.438},&#34;weather&#34;:[{&#34;id&#34;:800,&#34;main&#34;:&#34;Clear&#34;,&#34;description&#34;:&#34;clear sky&#34;,&#34;icon&#34;:&#34;01d&#34;}],&#34;base&#34;:&#34;stations&#34;,&#34;main&#34;:{&#34;temp&#34;:72.68,&#34;feels_like&#34;:72.46,&#34;temp_min&#34;:71.58,&#34;temp_max&#34;:75.04,&#34;pressure&#34;:1020,&#34;humidity&#34;:60},&#34;visibility&#34;:10000,&#34;wind&#34;:{&#34;speed&#34;:17.27,&#34;deg&#34;:130},&#34;clouds&#34;:{&#34;all&#34;:0},&#34;dt&#34;:1680207755,&#34;sys&#34;:{&#34;type&#34;:1,&#34;id&#34;:4248,&#34;country&#34;:&#34;US&#34;,&#34;sunrise&#34;:1680176886,&#34;sunset&#34;:1680221608},&#34;timezone&#34;:-18000,&#34;id&#34;:4429197,&#34;name&#34;:&#34;Landon&#34;,&#34;cod&#34;:200}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
