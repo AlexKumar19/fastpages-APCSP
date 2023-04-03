@@ -728,6 +728,68 @@ producer
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">tasks</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">def</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">task_name</span><span class="p">,</span> <span class="n">due_date</span><span class="p">):</span>
+    <span class="n">due_date_obj</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">due_date</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span>
+    <span class="n">tasks</span><span class="p">[</span><span class="n">task_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;due_date&#39;</span><span class="p">:</span> <span class="n">due_date_obj</span><span class="p">,</span> <span class="s1">&#39;completed&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Task &#39;</span><span class="si">{</span><span class="n">task_name</span><span class="si">}</span><span class="s2">&#39; added with due date </span><span class="si">{</span><span class="n">due_date</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">complete_task</span><span class="p">(</span><span class="n">task_name</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">task_name</span> <span class="ow">in</span> <span class="n">tasks</span><span class="p">:</span>
+        <span class="n">tasks</span><span class="p">[</span><span class="n">task_name</span><span class="p">][</span><span class="s1">&#39;completed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Task &#39;</span><span class="si">{</span><span class="n">task_name</span><span class="si">}</span><span class="s2">&#39; marked as completed.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Task &#39;</span><span class="si">{</span><span class="n">task_name</span><span class="si">}</span><span class="s2">&#39; not found.&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_due_tasks</span><span class="p">():</span>
+    <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tasks due today or earlier:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">task_name</span><span class="p">,</span> <span class="n">task_details</span> <span class="ow">in</span> <span class="n">tasks</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">task_details</span><span class="p">[</span><span class="s1">&#39;due_date&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">today</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">task_details</span><span class="p">[</span><span class="s1">&#39;completed&#39;</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">task_name</span><span class="si">}</span><span class="s2"> (due </span><span class="si">{</span><span class="n">task_details</span><span class="p">[</span><span class="s1">&#39;due_date&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+<span class="n">add_task</span><span class="p">(</span><span class="s1">&#39;Complete project&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-04-05 23:59:59&#39;</span><span class="p">)</span>
+<span class="n">add_task</span><span class="p">(</span><span class="s1">&#39;Buy groceries&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-04-02 12:00:00&#39;</span><span class="p">)</span>
+<span class="n">add_task</span><span class="p">(</span><span class="s1">&#39;Call mom&#39;</span><span class="p">,</span> <span class="s1">&#39;2023-04-03 09:00:00&#39;</span><span class="p">)</span>
+<span class="n">complete_task</span><span class="p">(</span><span class="s1">&#39;Buy groceries&#39;</span><span class="p">)</span>
+<span class="n">print_due_tasks</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Task &#39;Complete project&#39; added with due date 2023-04-05 23:59:59.
+Task &#39;Buy groceries&#39; added with due date 2023-04-02 12:00:00.
+Task &#39;Call mom&#39; added with due date 2023-04-03 09:00:00.
+Task &#39;Buy groceries&#39; marked as completed.
+Tasks due today or earlier:
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
