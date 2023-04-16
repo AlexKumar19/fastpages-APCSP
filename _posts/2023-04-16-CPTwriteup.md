@@ -18,7 +18,7 @@ This program utilizes the requests module to establish a connection with a publi
 
 
 3.a.iii.
-
+The name of the variable is pm25 which is a dictionary that stores the stored conectration of pm25 
 
 3b.
 3.b.i.
