@@ -1,10 +1,10 @@
 ---
 toc: true
 layout: post
-description: MCQ Practice for 2018
-title: Blog with solutions and learning for 2018 MCQ
+description: Simulations and artifacts
+title: Simulations for Project CHeck 2
 categories: [markdown, csp]
-permalink: /csp/MCQCollegeboard2018/
+permalink: /csp/artifactsandsimulations/
 ---
 
 # Demonstration of List
