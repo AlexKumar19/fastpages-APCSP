@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      1 min read
     
 </span></p>
 
@@ -99,130 +99,38 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#demonstration-of-list">Demonstration of List</a>
+<li class="toc-entry toc-h2"><a href="#overall-score">Overall Score</a></li>
+<li class="toc-entry toc-h2"><a href="#quiz-corrections">Quiz corrections</a></li>
+</ul><h2 id="overall-score">
+<a class="anchor" href="#overall-score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overall Score</h2>
+<p><img src="https://user-images.githubusercontent.com/110933283/232659045-d0983dd9-094e-4251-b188-7649d2213537.png" alt="image"></p>
 <ul>
-<li class="toc-entry toc-h2"><a href="#dictionary-simulation">Dictionary Simulation</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#word-list">Word List</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#2d-arrays">2D Arrays:</a></li>
-<li class="toc-entry toc-h2"><a href="#example-matrix--2d-array">Example Matrix / 2d array</a></li>
-<li class="toc-entry toc-h2"><a href="#accessing-elements">Accessing Elements</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#modifying-elements">Modifying Elements</a></li>
-<li class="toc-entry toc-h3"><a href="#iterating-and-printing-items">Iterating and printing items</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul><h1 id="demonstration-of-list">
-<a class="anchor" href="#demonstration-of-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demonstration of List</h1>
-<ul>
-  <li>Adding text to a list</li>
-  <li>This is a simulation where you can see the text getting added to the text box!</li>
-</ul>
-
-
-<button onclick="add()" id="my-button" class="primary-button">Click me!</button>
-<input type="text" id="mytextbox" name="textbox" class="form-control" placeholder="Enter Text" size="30" maxlength="50" required="">
-<p id="output"></p>
-
-
-<script>
-let textList = [];
-function add(){
-    
-    
-    let inputElement = document.getElementById("mytextbox");
-    let text = inputElement.value;
-    textList.push(text);
-    let outputElement = document.getElementById("output");
-    outputElement.textContent = textList
-
-}
-</script>
-
-<h2 id="dictionary-simulation">
-<a class="anchor" href="#dictionary-simulation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dictionary Simulation</h2>
-
-<p>Welcome to the dictionary simulation! Below, you will find a list of words and their definitions. To view the definition of a word, simply click on the button next to it.</p>
-
-<h3 id="word-list">
-<a class="anchor" href="#word-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Word List</h3>
-
-<ul>
-  <li>
-    <p><strong>Apple</strong><br>
-<button onclick="alert('A round fruit with a red, green, or yellow skin, and a white interior.')">View Definition</button></p>
-  </li>
-  <li>
-    <p><strong>Banana</strong><br>
-<button onclick="alert('A long, curved fruit with a yellow skin and a soft, sweet interior.')">View Definition</button></p>
-  </li>
-  <li>
-    <p><strong>Cactus</strong><br>
-<button onclick="alert('A plant with spiny stems and leaves that grow in arid regions.')">View Definition</button></p>
-  </li>
-  <li>
-    <p><strong>Dolphin</strong><br>
-<button onclick="alert('A marine mammal known for its intelligence, communication skills, and playful behavior.')">View Definition</button></p>
-  </li>
-  <li>
-    <p><strong>Elephant</strong><br>
-<button onclick="alert('A large, gray mammal with a long trunk and tusks, found in Africa and Asia.')">View Definition</button></p>
+  <li>Some topics covered in this MCQ is programming, algorithms, data structures, networking, and encryption
+    <ul>
+      <li>Some topics that I gained extra practice is with the coding blocks and determing the next block</li>
+      <li>Creating simulations was another topic that I enjoyed when taking this test</li>
+      <li>Some reflection or area to work on is cloud computing on Internet communication</li>
+      <li>Cloud computing refers to the delivery of computing services over the internet. It involves using remote servers to store, manage, and process data</li>
+    </ul>
   </li>
 </ul>
 
-<p>Dictionaries:</p>
-
+<h2 id="quiz-corrections">
+<a class="anchor" href="#quiz-corrections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz corrections</h2>
+<p><img src="https://user-images.githubusercontent.com/110933283/232659937-6b243942-5345-4d11-9e5e-cd397879c772.png" alt="image"></p>
 <ul>
-  <li>A dictionary is a collection of key-value pairs that are unordered, mutable, and indexed.</li>
-  <li>Dictionaries are defined using curly braces {} with key-value pairs separated by a colon (:).</li>
-  <li>Keys in a dictionary should be unique and immutable (strings, numbers, and tuples), while values can be of any data type.</li>
-  <li>Dictionaries can be accessed using the keys, using the squarebracket notation with the key name as the index.</li>
-  <li>You can also use the .get() method to retrieve a value for a given key. If the key does not exist, the method returns None (or a default value if provided).</li>
-  <li>Dictionaries have several built-in methods such as .keys(), .values(), and .items() to retrieve the keys, values, and key-value pairs respectively.</li>
-  <li>You can add, update, and remove elements from a dictionary using various built-in methods.
-    <h2 id="2d-arrays">
-<a class="anchor" href="#2d-arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>2D Arrays:</h2>
-  </li>
-  <li>A 2D array, also known as a matrix, is a collection of elements arranged in rows and columns.</li>
-  <li>A 2D array is defined using square brackets [] with each row separated by a comma, and each element within the row separated by a space.</li>
-  <li>You can access individual elements within a 2D array using square brackets and the row and column indices (e.g. arr[row][column]).</li>
-  <li>2D arrays can be used to represent data that has two dimensions, such as an image or a spreadsheet.</li>
-  <li>You can perform various operations on 2D arrays such as transposing (swapping rows and columns), adding and subtracting, and multiplying by a scalar or another matrix.</li>
-  <li>There are several libraries available in Python, such as NumPy and Pandas, that provide more efficient and powerful tools for working with 2D arrays and matrices.</li>
+  <li>Cloud computing has made it easier for people to work together on projects and share information over the internet. However, it has also created new security concerns as data is stored on remote servers, and companies need to be careful about protecting their information. It is important to stay informed about the latest trends and best practices in cloud computing to use it effectively and securely.</li>
+  <li>The correct answer here is B and C</li>
+  <li>Cloud computing has definitely enhanced collaboration</li>
+  <li>and It has also introduced security concerns</li>
 </ul>
 
-<h2 id="example-matrix--2d-array">
-<a class="anchor" href="#example-matrix--2d-array" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Matrix / 2d array</h2>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="p">]</span>
-</code></pre></div></div>
-<h2 id="accessing-elements">
-<a class="anchor" href="#accessing-elements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessing Elements</h2>
-<p>To access an element in a 2D array, you need to specify the row and column indices. For example, to access the element in row 2, column 3 of the matrix array above (which contains the value 6), you would use the following syntax:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">element</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>   <span class="c1"># row 2, column 3
-</span></code></pre></div></div>
-
-<h3 id="modifying-elements">
-<a class="anchor" href="#modifying-elements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modifying Elements</h3>
-<p>To modify an element in a 2D array, you can use the same syntax as for accessing elements. For example, to change the value of the element in row 2, column 3 of the matrix array above to 10, you would use the following syntax:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>   <span class="c1"># row 2, column 3
-</span></code></pre></div></div>
-
-<h3 id="iterating-and-printing-items">
-<a class="anchor" href="#iterating-and-printing-items" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iterating and printing items</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
-</code></pre></div></div>
+<p><img src="https://user-images.githubusercontent.com/110933283/232660331-0eed44ad-b9cd-417b-9418-85e051753572.png" alt="image"></p>
+<ul>
+  <li>FOr this coding problem I misread the problem</li>
+  <li>One thing that I need to reflect on is reading the problem more carefully and understanding the problem better</li>
+  <li>The correct answer to this problem is C and D because those code segments will output the wrong value because the code segment will look for the first number that is smaller however depending on the data set this will not work because they will not always have the smallest value in the beggining</li>
+</ul>
 
   </div><a class="u-url" href="/fastpages-APCSP/csp/MCQCollegeboard2018/" hidden></a>
 </article>
