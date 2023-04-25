@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Data structures lesson",
-            "content": "&lt;!DOCTYPE html&gt; . Word Guessing Game . Word Guessing Game . Guess the word: . Enter a letter: . Guess Number of guesses remaining: . .",
+            "content": "Word Guessing Game . Word Guessing Game . Guess the word: . Enter a letter: . Guess Number of guesses remaining: . . for (let i = 0; i &lt; word.length; i++) { if (word[i] === letter) { wordLetters[i] = letter; foundLetter = true; } } . This is a loop that iterates over the letters in the word and checks to see if the guessed word matches any of the letters in the actual word | afer iterating, if the word matches it will mark the letter as found adn the user will get instant feedback and see if the word was chosen | . const words = [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;, &#39;orange&#39;, &#39;pear&#39;]; . here is the list of possible words | Each of the words are stored in the list that is created in javascript | .",
             "url": "https://alexkumar19.github.io/fastpages-APCSP/csp/datastructurelessonideas/",
             "relUrl": "/csp/datastructurelessonideas/",
             "date": " • Apr 25, 2023"

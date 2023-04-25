@@ -101,8 +101,6 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#word-guessing-game">Word Guessing Game</a></li>
 </ul><body>
-<p>&lt;!DOCTYPE html&gt;</p>
-
   
     <title>Word Guessing Game</title>
   
@@ -116,11 +114,9 @@ window.onload = wrap_img;
     <button onclick="guessLetter()">Guess</button>
     <p>Number of guesses remaining: <span id="guesses"></span></p>
     <script>
-      // Define the words to choose from
       const words = ['apple', 'banana', 'cherry', 'orange', 'pear'];
       // Choose a random word from the list
       let word = words[Math.floor(Math.random() * words.length)];
-      // Create an array to store the letters of the word and initialize it with underscores
       let wordLetters = new Array(word.length).fill('_');
       // Initialize the number of guesses remaining
       let guessesRemaining = 6;
@@ -159,6 +155,26 @@ window.onload = wrap_img;
     </script>
   
 
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">word</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">===</span> <span class="n">letter</span><span class="p">)</span> <span class="p">{</span>
+              <span class="n">wordLetters</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">letter</span><span class="p">;</span>
+              <span class="n">foundLetter</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>This is a loop that iterates over the letters in the word and checks to see if the guessed word matches any of the letters in the actual word</li>
+  <li>afer iterating, if the word matches it will mark the letter as found adn the user will get instant feedback and see if the word was chosen</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">const</span> <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">'apple'</span><span class="p">,</span> <span class="s">'banana'</span><span class="p">,</span> <span class="s">'cherry'</span><span class="p">,</span> <span class="s">'orange'</span><span class="p">,</span> <span class="s">'pear'</span><span class="p">];</span>
+</code></pre></div></div>
+<ul>
+  <li>here is the list of possible words</li>
+  <li>Each of the words are stored in the list that is created in javascript</li>
+</ul>
 </body>
   </div><a class="u-url" href="/fastpages-APCSP/csp/datastructurelessonideas/" hidden></a>
 </article>
