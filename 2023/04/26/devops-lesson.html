@@ -166,6 +166,19 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Slide Hacks</p>
+<ol>
+<li>The Domain Name System (DNS) is a system that translates domain names (such as www.google.com) into IP addresses, </li>
+<li>it is used by computers to establish connections. </li>
+<li>DNS works by using a distributed database system to map domain names to IP addresses. When a user types a domain name into their browser, the browser sends a request to a DNS resolver. The resolver then queries a series of DNS servers to find the IP address associated with the domain name, and returns it to the user's browser. </li>
+<li>DNS resolvers are computer programs or services provided by ISPs or public DNS services, and are responsible for handling the DNS lookup process on behalf of client devices such as computers or smartphones, that are trying to access websites or other Internet resources.</li>
+</ol>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -348,9 +361,20 @@ No access is available to NON-Managed Sites.&lt;br&gt;&lt;br&gt;
 <span class="p">}</span>
 </pre></div>
 <h2 id="Check-In">Check In<a class="anchor-link" href="#Check-In"> </a></h2><ol>
-<li>Research 1 HTTP header and describe, in detail, its purpose.</li>
-<li>Write a line in a sample NGINX configuration that will add that specific header to the <code>/information</code> location</li>
-<li>Explain the purpose of the load balancing performed by NGINX</li>
+<li>Research 1 HTTP header and describe, in detail, its purpose.<ol>
+<li>The "User-Agent" header is a significant HTTP header that serves a crucial role. It is sent from the client to the server as part of an HTTP request and is used to identify the type of client software making the request, which could be a web browser, a mobile app, or a search engine crawler.</li>
+</ol>
+</li>
+<li>Write a line in a sample NGINX configuration that will add that specific header to the <code>/information</code> location<ol>
+<li>location /information {
+add_header User-Agent "MyCustomUserAgentString";
+# Other configuration options for this location}</li>
+</ol>
+</li>
+<li>Explain the purpose of the load balancing performed by NGINX<ol>
+<li>To improve web application availability, scalability, and performance, NGINX utilizes load balancing techniques that distribute incoming traffic among multiple servers or instances. The goal is to avoid overloading any single server with traffic. NGINX achieves this by implementing various load balancing algorithms, such as round-robin, least connections, and IP hash, to determine how to allocate traffic.</li>
+</ol>
+</li>
 <li>Modify the following code block to obtain the value of the secret header on <code>/products</code> of the AWS site</li>
 </ol>
 
@@ -366,9 +390,9 @@ No access is available to NON-Managed Sites.&lt;br&gt;&lt;br&gt;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aws</span> <span class="o">=</span> <span class="s2">&quot;3.130.255.192&quot;</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span> <span class="o">+</span> <span class="n">aws</span><span class="o">+</span> <span class="s2">&quot;/products&quot;</span><span class="p">)</span>
+<span class="c1">#response = requests.get(&quot;http://&quot; + aws+ &quot;/products&quot;)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The secret header is:&quot;</span><span class="p">,</span> <span class="s2">&quot;...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The secret header is:&quot;</span><span class="p">,</span> <span class="s2">&quot;&#39;X-Cooler-Header&#39;: &#39;This is my secret header!&#39;&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -381,7 +405,7 @@ No access is available to NON-Managed Sites.&lt;br&gt;&lt;br&gt;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The secret header is: ...
+<pre>The secret header is: &#39;X-Cooler-Header&#39;: &#39;This is my secret header!&#39;
 </pre>
 </div>
 </div>
@@ -406,31 +430,47 @@ No access is available to NON-Managed Sites.&lt;br&gt;&lt;br&gt;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="CORS-Hacks">CORS Hacks<a class="anchor-link" href="#CORS-Hacks"> </a></h1><ol>
-<li>Explain what CORS is and what it stands for</li>
-<li>Describe how you would be able to implement CORS into your own websites</li>
-<li>Describe why you would want to implement CORS into your own websites</li>
-<li>How could use CORS to benefit yourself in the future?</li>
+<li>Explain what CORS is and what it stands for<ol>
+<li>Cross-Origin Resource Sharing, or CORS for short, is a mechanism that permits web servers to authorize web browsers to access resources from a domain that differs from the one that issued the initial request. Its primary function is to either grant or restrict access from other domains.</li>
+</ol>
+</li>
+<li>Describe how you would be able to implement CORS into your own websites<ol>
+<li>To implement CORS on a website, specific HTTP headers must be configured on the server-side response for requests originating from other domains. The necessary headers to be set are "Access-Control-Allow-Origin", "Access-Control-Allow-Methods", and "Access-Control-Allow-Headers".</li>
+</ol>
+</li>
+<li>Describe why you would want to implement CORS into your own websites<ol>
+<li>The implementation of CORS is significant as it enables websites to obtain resources from various domains, ultimately enhancing the user experience and facilitating the creation of sophisticated web applications that rely on resources from multiple domains.</li>
+</ol>
+</li>
+<li>How could use CORS to benefit yourself in the future?<ol>
+<li>Using CORS can benefit developers in the long term by eliminating cross-origin security issues and enabling the creation of complex web applications that use resources from multiple domains. It also allows developers to access data from APIs hosted on different domains, which is useful for developing applications that rely on data from multiple sources.</li>
+</ol>
+</li>
 </ol>
 <p>Total: 0.2 points</p>
 <h1 id="KASM-Hacks">KASM Hacks<a class="anchor-link" href="#KASM-Hacks"> </a></h1><ol>
-<li>What is the purpose of "sudo" when running commands in terminal?</li>
-<li>What are some commands which allow us to look at how the storage of a machine is set up as?</li>
-<li>What do you think are some alternatives to running "curl -O" to get the zip file for KASM?</li>
-<li>What kind of commands do you think the "install.sh" command has and why is it necessary to call it?</li>
-<li>Explain in at least 3-4 sentences how deploying KASM is related to/requires other topics talked about in the lesson and/or potential ways to add things mentioned in the lesson to this guide.</li>
+<li>What is the purpose of "sudo" when running commands in terminal?<ol>
+<li>In the terminal, "sudo" allows running other commands with administrator privileges, enabling tasks such as software installation or system modification.</li>
+</ol>
+</li>
+<li>What are some commands which allow us to look at how the storage of a machine is set up as?<ol>
+<li>If you want to inspect the storage configuration of a machine, some useful commands to consider are "df -h" for available file system space, "lsblk" to obtain information about storage devices, and "mount" to view file systems currently in use.</li>
+</ol>
+</li>
+<li>What do you think are some alternatives to running "curl -O" to get the zip file for KASM?<ol>
+<li>Aside from "curl -O", options for downloading the KASM zip file include web browsers, download manager apps, or alternate command-line tools such as "wget".</li>
+</ol>
+</li>
+<li>What kind of commands do you think the "install.sh" command has and why is it necessary to call it?<ol>
+<li>Using "install.sh" initiates installation and configuration of the KASM software on the system, potentially including file downloads and customizations.</li>
+</ol>
+</li>
+<li>Explain in at least 3-4 sentences how deploying KASM is related to/requires other topics talked about in the lesson and/or potential ways to add things mentioned in the lesson to this guide.<ol>
+<li>Deploying KASM necessitates knowledge of command-line usage, software package management, and network security measures. You can expand this guide to include other topics, such as configuring firewalls, user permissions, and integrating KASM with other security tools.</li>
+</ol>
+</li>
 </ol>
 <p>Total: 0.2 points</p>
-<h1 id="AWS/RDS-Hacks">AWS/RDS Hacks<a class="anchor-link" href="#AWS/RDS-Hacks"> </a></h1><p>See the <a href="https://firestorm0986.github.io/SLAAT/posts/sqlite-aws/">setup post</a></p>
-<ul>
-<li>Create your own database in the EC2 I have created (ec2-database-connect)<ul>
-<li>name it with your first and last name (example: aditya-nawandhar) (0.1)</li>
-<li>Create a table using the commands on the link provided. (0.1)</li>
-<li>using commands from the link provided make columns and rows with test data (can be anything) (example: “name” and “class” are the columns with rows being something like “Aditya” and “Junior”). At least 4 test rows (0.1)</li>
-<li>additional points if the data matches CPT (Bonus: 0.05)</li>
-</ul>
-</li>
-</ul>
-<p>Total: 0.3</p>
 
 </div>
 </div>
