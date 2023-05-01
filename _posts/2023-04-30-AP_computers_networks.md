@@ -18,10 +18,10 @@ week: 29
 > As we have learned, a computer needs aa program to do something smart.  The sequence of a program initiates a series of actions with the computers Central Processing Unit (CPU). This component is essentially a binary machine focussing on program instructions provided.  The CPU retrieives and stores the data it acts upon in Random Access Memory (RAM). Between the CPU, RAM, and Storage Devices a computer can work with many programs and large amounts of data.
 
 List specification of your Computer, or Computers if working as Pair/Trio
-- Processor GHz:
-- Memory in GB:
-- Storage in GB:
-- OS:
+- Processor GHz: Intel Core i7
+- Memory in GB: 32 gigs
+- Storage in GB: 1 terabyte
+- OS: Windows 10
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
 - Input devices: lets a user interact with the computer- mouse, microphone, keyboard
@@ -34,6 +34,14 @@ Data File: has information in the file, or data in a specific format, can be CRU
 Inspect Running Code: the inspect element on browser, shows what is happening behind what we see normally, cherry tomatoes when we debug in VS code
 Inspect Variables: see the values on the variables to debug and see what is happening
 
+## how does a computer work
+
+The basic parts of a computer are:
+Input devices: These devices allow users to input data into the computer, such as the keyboard, mouse, and microphone.
+Output devices: These devices allow users to see or hear the results of the computer's processing, such as the monitor, printer, and speakers.
+Storage devices: These devices store data that is not currently being used by the computer, such as the hard drive, CD-ROM, and DVD-ROM.
+Central processing unit (CPU): The CPU is the "brain" of the computer. It is responsible for carrying out the instructions that are given to it by the computer's software.
+Memory: Memory is used to store data that is currently being used by the computer, such as the operating system, applications, and data files.
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
 
@@ -127,8 +135,10 @@ Fault tolerance is a process that lets an OS respond to failure in the hardware 
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
 - What is naturally Distributed in Frontend/Backend archeticture?  
+  - The frontend and backend of a web application are naturally distributed. The frontend is typically hosted on a web server, which is a single machine. The backend, on the other hand, can be distributed across multiple machines. This is because the backend typically consists of different components, such as a database, a web server, and an application server. Each of these components can be hosted on its own machine.
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
+  - The command ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086" sets the environment variable GUNICORN_CMD_ARGS to the value "--workers=1 --bind=0.0.0.0:8086". The GUNICORN_CMD_ARGS environment variable is used to pass additional command line arguments to Gunicorn.
 
 
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
@@ -169,3 +179,38 @@ result = ray.get(part1_result) + ray.get(part2_result)
 print(result)
 
 ```
+
+
+
+### personal example
+
+```python
+
+import time
+
+def factorial(n):
+  # Calculate the factorial of n.
+  if n == 0:
+    return 1
+  else:
+    return n * factorial(n - 1)
+
+if __name__ == "__main__":
+  # Start the timer.
+  start_time = time.time()
+
+  # Calculate the factorial of 100 in parallel.
+  results = []
+  for i in range(10):
+    results.append(factorial(100))
+
+  # Stop the timer.
+  end_time = time.time()
+
+  # Print the results.
+  print(results)
+
+  # Print the elapsed time.
+  print("Elapsed time:", end_time - start_time)
+  ```
+  This code calculates the factorial of 100 in parallel. It starts by creating a list of 10 worker processes. It then submits the factorial function to each worker process. The worker processes calculate the factorial of 100 in parallel. The results of the calculation are then collected and printed.
