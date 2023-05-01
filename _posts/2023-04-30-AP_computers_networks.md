@@ -66,7 +66,25 @@ Computer System –> A computing system is a group of computing devices and prog
 Computer Device –> A computing device is a physical artifact that can run a program. Some examples include computers, tablets, servers, routers, and smart sensors.
 Bandwidth –> Bandwidth is usually measured in bits per second.
 Computer Network –> A computer network is a group of interconnected computing devices capable of sending or receiving data.
-![image](https://user-images.githubusercontent.com/110933283/235527217-0ada9ec4-fac0-4b9c-9d14-5ae10f580501.png)
+![image](https://user-images.githubusercontent.com/110933283/235528117-d53a7d91-fd4f-45ef-bf4b-2e98d9b371a6.png)
+
+The OSI model is a conceptual model that describes the seven layers of a network architecture. The network layer is responsible for routing data between differnt networks, and the application layer is responsible for providing services to the user, such as web browsing or email.
+
+The network layer works by breaking down data into smaller units called packets. Each packet contains the source and destination addresses, as well as the data itself. The network layer then uses routing protocols to determine the best path for each packet to take. Once the packets reach their destination, they are reassembled into the original data.
+
+The application layer is responsible for providing services to the user. For example, the web browser application uses the application layer to request web pages from a web server. The web server then uses the application layer to send the web pages back to the web browser.
+
+The OSI model is a helpful tool for understanding how networks work. It can also be used to troubleshoot network problems. For example, if a user is unable to access a web page, a network administrator can use the OSI model to identify the layer at which the problem is occurring.
+
+Here is a brief overview of the seven layers of the OSI model:
+
+Physical layer: The physical layer is responsible for the transmission of raw data bits over a physical medium, such as a copper wire or an optical fiber.
+Data link layer: The data link layer is responsible for error detection and correction, as well as flow control.
+Network layer: The network layer is responsible for routing data between different networks.
+Transport layer: The transport layer is responsible for ensuring that data is delivered in the correct order and that it is not corrupted.
+Session layer: The session layer is responsible for managing the communication between two applications.
+Presentation layer: The presentation layer is responsible for converting data into a format that can be understood by the application.
+Application layer: The application layer is responsible for providing services to the user.
 > Watch/review College Board Daily Video 4.1.2
 
 - Complete True of False Questions
