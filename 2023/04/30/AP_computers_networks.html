@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      10 min read
     
 </span></p>
 
@@ -94,9 +94,14 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#requirements">Requirements</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#how-a-computer-works">How a Computer Works</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#how-does-a-computer-work">how does a computer work</a>
+<ul>
 <li class="toc-entry toc-h3"><a href="#the-internet">The Internet</a></li>
 <li class="toc-entry toc-h3"><a href="#fault-tolerance">Fault Tolerance</a></li>
 <li class="toc-entry toc-h3"><a href="#parallel-and-distributed-computing">Parallel and Distributed Computing</a></li>
+<li class="toc-entry toc-h3"><a href="#personal-example">personal example</a></li>
 </ul>
 </li>
 </ul><h2 id="requirements">
@@ -113,10 +118,10 @@ window.onload = wrap_img;
 
 <p>List specification of your Computer, or Computers if working as Pair/Trio</p>
 <ul>
-  <li>Processor GHz:</li>
-  <li>Memory in GB:</li>
-  <li>Storage in GB:</li>
-  <li>OS:</li>
+  <li>Processor GHz: Intel Core i7</li>
+  <li>Memory in GB: 32 gigs</li>
+  <li>Storage in GB: 1 terabyte</li>
+  <li>OS: Windows 10</li>
 </ul>
 
 <p>Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.</p>
@@ -131,6 +136,16 @@ Data File: has information in the file, or data in a specific format, can be CRU
 Inspect Running Code: the inspect element on browser, shows what is happening behind what we see normally, cherry tomatoes when we debug in VS code
 Inspect Variables: see the values on the variables to debug and see what is happening</li>
 </ul>
+
+<h2 id="how-does-a-computer-work">
+<a class="anchor" href="#how-does-a-computer-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>how does a computer work</h2>
+
+<p>The basic parts of a computer are:
+Input devices: These devices allow users to input data into the computer, such as the keyboard, mouse, and microphone.
+Output devices: These devices allow users to see or hear the results of the computer’s processing, such as the monitor, printer, and speakers.
+Storage devices: These devices store data that is not currently being used by the computer, such as the hard drive, CD-ROM, and DVD-ROM.
+Central processing unit (CPU): The CPU is the “brain” of the computer. It is responsible for carrying out the instructions that are given to it by the computer’s software.
+Memory: Memory is used to store data that is currently being used by the computer, such as the operating system, applications, and data files.</p>
 
 <p><img src="/fastpages-APCSP/images/cpu.jpeg" alt="Computer Hardware"></p>
 
@@ -247,11 +262,15 @@ Fault tolerance is a process that lets an OS respond to failure in the hardware 
 </blockquote>
 
 <ul>
-  <li>
-    <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
+  <li>What is naturally Distributed in Frontend/Backend archeticture?
+    <ul>
+      <li>The frontend and backend of a web application are naturally distributed. The frontend is typically hosted on a web server, which is a single machine. The backend, on the other hand, can be distributed across multiple machines. This is because the backend typically consists of different components, such as a database, a web server, and an application server. Each of these components can be hosted on its own machine.</li>
+    </ul>
   </li>
-  <li>
-    <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a></p>
+  <li>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>
+    <ul>
+      <li>The command ENV GUNICORN_CMD_ARGS=”–workers=1 –bind=0.0.0.0:8086” sets the environment variable GUNICORN_CMD_ARGS to the value “–workers=1 –bind=0.0.0.0:8086”. The GUNICORN_CMD_ARGS environment variable is used to pass additional command line arguments to Gunicorn.</li>
+    </ul>
   </li>
 </ul>
 
@@ -298,6 +317,39 @@ Fault tolerance is a process that lets an OS respond to failure in the hardware 
 </span><span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
 </code></pre></div></div>
+
+<h3 id="personal-example">
+<a class="anchor" href="#personal-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>personal example</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+  <span class="c1"># Calculate the factorial of n.
+</span>  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">1</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+  <span class="c1"># Start the timer.
+</span>  <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+
+  <span class="c1"># Calculate the factorial of 100 in parallel.
+</span>  <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+
+  <span class="c1"># Stop the timer.
+</span>  <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+
+  <span class="c1"># Print the results.
+</span>  <span class="k">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+  <span class="c1"># Print the elapsed time.
+</span>  <span class="k">print</span><span class="p">(</span><span class="s">"Elapsed time:"</span><span class="p">,</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+</code></pre></div></div>
+<p>This code calculates the factorial of 100 in parallel. It starts by creating a list of 10 worker processes. It then submits the factorial function to each worker process. The worker processes calculate the factorial of 100 in parallel. The results of the calculation are then collected and printed.</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
