@@ -66,7 +66,7 @@ Computer System –> A computing system is a group of computing devices and prog
 Computer Device –> A computing device is a physical artifact that can run a program. Some examples include computers, tablets, servers, routers, and smart sensors.
 Bandwidth –> Bandwidth is usually measured in bits per second.
 Computer Network –> A computer network is a group of interconnected computing devices capable of sending or receiving data.
-
+![image](https://user-images.githubusercontent.com/110933283/235527217-0ada9ec4-fac0-4b9c-9d14-5ae10f580501.png)
 > Watch/review College Board Daily Video 4.1.2
 
 - Complete True of False Questions
