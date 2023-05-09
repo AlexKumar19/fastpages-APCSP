@@ -1,3 +1,5 @@
+# Credit to Rapid API for the the headers and code to retrieve data from the API
+# Note: collaboration with Samit Poojary on the idea and some coding is shared.
 import requests
 storeddata = [{'pm2.5': {}}, {'pm10': {}}]
 # API call that adds the pm25 to the list
@@ -29,6 +31,7 @@ def findpm25(city):
 
 # API call for pm10 function
 def findpm10(city):
+    # Credit to Rapid API for the the headers and code to retrieve data from the API
     url = "https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality"
 
     querystring = {"city": city}
