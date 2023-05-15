@@ -153,9 +153,10 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>You chose corner number 2 and are still in!
+<pre>What corner do you choose?3
 You chose corner number 3 and are still in!
-You chose corner number 4 and you&#39;re OUT
+What corner do you choose?2
+You chose corner number 2 and you&#39;re OUT
 </pre>
 </div>
 </div>

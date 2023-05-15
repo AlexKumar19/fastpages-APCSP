@@ -21,7 +21,7 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-is-a-Hashtable/Hashmap?">What is a Hashtable/Hashmap?<a class="anchor-link" href="#What-is-a-Hashtable/Hashmap?"> </a></h2><blockquote><p>A hashtable is a data structure that with a collection of key-value pairs, where each key maps to a value, and the keys must be unique and hashable.</p>
+<h2 id="What-is-a-Hashtable/Hashmap?">What is a Hashtable/Hashmap?<a class="anchor-link" href="#What-is-a-Hashtable/Hashmap?"> </a></h2><blockquote><p>A hashtable is a data structure that with a collection f key-value pairs, where each key maps to a value, and the keys must be unique and hashable.</p>
 </blockquote>
 <ul>
 <li>In Python there is a built in hashtable known as a dictionary.</li>
