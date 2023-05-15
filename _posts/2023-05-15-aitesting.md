@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: Ai work
+description: Ai stuff
 title: AI work
 categories: [markdown, csp]
 permalink: /csp/aiworktesting/
