@@ -14,7 +14,7 @@ permalink: /csp/aiworktesting/
     <title>Favorite Foods</title>
     <script>
         function callAPI() {
-            var api_key = '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';
+            var api_key = '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';
             var endpoint = 'https://api.openai.com/v1/completions';
             var headers = {
                 'Authorization': 'Bearer ' + api_key,
