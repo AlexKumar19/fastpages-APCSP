@@ -8,6 +8,7 @@ permalink: /csp/aiworktesting/
 ---
 
 
+
 <!DOCTYPE html>
 <html>
 
@@ -42,7 +43,7 @@ permalink: /csp/aiworktesting/
 
     async function ship() {
       const start = 0;
-      const distance = 60;
+      const distance = 3;
       const step = 2;
 	
       for (let position = start; position < distance; position += step) {
