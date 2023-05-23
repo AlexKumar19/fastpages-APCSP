@@ -27,7 +27,7 @@ permalink: /csp/aiworktesting/
     <button onclick="stopAdding()" id="stop-button">Stop</button>
     <br><br>
     <button onclick="callAPI(); ship()">Get Cuisine Recommendation</button>
-    <input type="text" id="foods">
+    <p id="foods"></p>
   <pre id="ship-animation"></pre>
 
   <script>
@@ -57,7 +57,7 @@ permalink: /csp/aiworktesting/
       return new Promise(resolve => setTimeout(resolve, ms));
     }
     function callAPI() {
-            var api_key = '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';
+            var api_key = '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';
             var endpoint = 'https://api.openai.com/v1/completions';
             var headers = {
                 'Authorization': 'Bearer ' + api_key,
@@ -78,6 +78,8 @@ permalink: /csp/aiworktesting/
             .then(result => {
                 var completed_text = result.choices[0].text;
                 console.log(completed_text);
+                 			document.getElementById('foods').innerHTML = completed_text
+                
             });
         }
         function addFood() {
