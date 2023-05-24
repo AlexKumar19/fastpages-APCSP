@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>AI work | Alex’s Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="AI work" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ai stuff" />
+<meta property="og:description" content="Ai stuff" />
+<link rel="canonical" href="https://alexkumar19.github.io/fastpages-APCSP/csp/aiworktesting/" />
+<meta property="og:url" content="https://alexkumar19.github.io/fastpages-APCSP/csp/aiworktesting/" />
+<meta property="og:site_name" content="Alex’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-15T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="AI work" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-15T00:00:00-05:00","datePublished":"2023-05-15T00:00:00-05:00","description":"Ai stuff","headline":"AI work","mainEntityOfPage":{"@type":"WebPage","@id":"https://alexkumar19.github.io/fastpages-APCSP/csp/aiworktesting/"},"url":"https://alexkumar19.github.io/fastpages-APCSP/csp/aiworktesting/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages-APCSP/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://alexkumar19.github.io/fastpages-APCSP/feed.xml" title="Alex's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages-APCSP/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages-APCSP/">Alex&#39;s Blog</a></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">AI work</h1><p class="page-description">Ai stuff</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-15T00:00:00-05:00" itemprop="datePublished">
+        May 15, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages-APCSP/categories/#markdown">markdown</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages-APCSP/categories/#csp">csp</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#favorite-foods">Favorite Foods</a></li>
+</ul><body>
+<p>&lt;!DOCTYPE html&gt;</p>
+
+
+
+  <style>
+    #ship-animation {
+      font-family: monospace;
+      font-size: 20px;
+    }
+  </style>
+
+
+<h1>
+<a class="anchor" href="#favorite-foods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Favorite Foods</h1>
+    <ul id="food-list"></ul>
+    <input type="text" id="food-input">
+    <button onclick="addFood()" id="add-button">Add Food</button>
+    <button onclick="stopAdding()" id="stop-button">Stop</button>
+    <br><br>
+    <button onclick="callAPI(); ship()">Get Cuisine Recommendation</button>
+    <p id="foods"></p>
+  <pre id="ship-animation"></pre>
+
+  <script>
+    function shipPrint(position) {
+      const animationElement = document.getElementById('ship-animation');
+      const spaces = ' '.repeat(position);
+
+      const frame = `${spaces} .   \n${spaces}  .   \n${spaces}    .\n\\~~~~~/\n \\   /\n  \\ /\n   V\n   |\n   |\n------`;
+
+      animationElement.textContent = frame;
+    }
+
+    async function ship() {
+      const start = 0;
+      const distance = 3;
+      const step = 2;
+	
+      for (let position = start; position < distance; position += step) {
+        shipPrint(0);
+        await sleep(1000);
+        shipPrint(2);
+        await sleep(1000);
+      }
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    function callAPI() {
+            var api_key = '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';
+            var endpoint = 'https://api.openai.com/v1/completions';
+            var headers = {
+                'Authorization': 'Bearer ' + api_key,
+                'Content-Type': 'application/json'
+            };
+            var text = document.getElementById('foods').value;
+            var data = {
+                'model': 'text-davinci-003',
+                'prompt': "Give me a specific cuisine that I would like based on the foods that I like. Here are the foods: " + text,
+                'max_tokens': 100
+            };
+            fetch(endpoint, {
+                method: 'POST',
+                headers: headers,
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                var completed_text = result.choices[0].text;
+                console.log(completed_text);
+                 			document.getElementById('foods').innerHTML = completed_text
+                
+            });
+        }
+        function addFood() {
+            var foodInput = document.getElementById('food-input');
+            var food = foodInput.value.trim();
+            if (food !== '') {
+                var foodList = document.getElementById('food-list');
+                var foodItem = document.createElement('li');
+                foodItem.textContent = food;
+                foodList.appendChild(foodItem);
+                foodInput.value = '';
+            }
+        }
+        function stopAdding() {
+            callAPI();
+            document.getElementById('food-input').disabled = true;
+            document.getElementById('add-button').disabled = true;
+            document.getElementById('stop-button').disabled = true;
+        }
+
+    
+  </script>
+
+
+</body>
+  </div><a class="u-url" href="/fastpages-APCSP/csp/aiworktesting/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages-APCSP/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://alexkumar19.github.io/fastpages-APCSP/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages-APCSP/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
