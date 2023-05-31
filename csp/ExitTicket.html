@@ -402,6 +402,193 @@ Exiting the program. Goodbye!
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Store object&quot;</span><span class="p">);</span>
+
+<span class="kr">class</span> <span class="nx">Product</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">price</span><span class="p">,</span> <span class="nx">category</span><span class="o">=</span><span class="s2">&quot;Misc&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">price</span> <span class="o">=</span> <span class="nx">price</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">category</span> <span class="o">=</span> <span class="nx">category</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">setCategory</span><span class="p">(</span><span class="nx">category</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">category</span> <span class="o">=</span> <span class="nx">category</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">getJSON</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="k">typeof</span> <span class="k">this</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">id</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">price</span><span class="p">,</span> <span class="nx">category</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">category</span><span class="p">};</span>
+    <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">logIt</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;Product json &lt;br&gt;&quot;</span><span class="p">);</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>  
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="nx">Store</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">manager</span><span class="p">,</span> <span class="nx">products</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">manager</span> <span class="o">=</span> <span class="nx">manager</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">products</span> <span class="o">=</span> <span class="nx">products</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">store</span> <span class="o">=</span> <span class="p">[</span><span class="nx">manager</span><span class="p">,</span> <span class="p">...</span><span class="nx">products</span><span class="p">];</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">json</span> <span class="o">=</span> <span class="s1">&#39;{&quot;store&quot;:[&#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">product</span> <span class="p">=&gt;</span> <span class="nx">product</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39;]}&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">logIt</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;Store object in JSON&lt;br&gt;&quot;</span><span class="p">);</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">json</span> <span class="o">+</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>  
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">constructStore</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">manager</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Product</span><span class="p">(</span><span class="s2">&quot;Mr M&quot;</span><span class="p">,</span> <span class="s2">&quot;mgr01&quot;</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="s2">&quot;Manager&quot;</span><span class="p">);</span>
+
+    <span class="kr">const</span> <span class="nx">products</span> <span class="o">=</span> <span class="p">[</span> 
+        <span class="k">new</span> <span class="nx">Product</span><span class="p">(</span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span> <span class="s2">&quot;prd01&quot;</span><span class="p">,</span> <span class="mf">1.99</span><span class="p">,</span> <span class="s2">&quot;Fruits&quot;</span><span class="p">),</span>
+        <span class="k">new</span> <span class="nx">Product</span><span class="p">(</span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span> <span class="s2">&quot;prd02&quot;</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">,</span> <span class="s2">&quot;Fruits&quot;</span><span class="p">),</span>
+        <span class="k">new</span> <span class="nx">Product</span><span class="p">(</span><span class="s2">&quot;Tomato&quot;</span><span class="p">,</span> <span class="s2">&quot;prd03&quot;</span><span class="p">,</span> <span class="mf">2.99</span><span class="p">,</span> <span class="s2">&quot;Vegetables&quot;</span><span class="p">),</span>
+        <span class="k">new</span> <span class="nx">Product</span><span class="p">(</span><span class="s2">&quot;Potato&quot;</span><span class="p">,</span> <span class="s2">&quot;prd04&quot;</span><span class="p">,</span> <span class="mf">1.49</span><span class="p">,</span> <span class="s2">&quot;Vegetables&quot;</span><span class="p">),</span>
+        <span class="k">new</span> <span class="nx">Product</span><span class="p">(</span><span class="s2">&quot;Milk&quot;</span><span class="p">,</span> <span class="s2">&quot;prd05&quot;</span><span class="p">,</span> <span class="mf">3.49</span><span class="p">,</span> <span class="s2">&quot;Dairy&quot;</span><span class="p">),</span>
+        <span class="k">new</span> <span class="nx">Product</span><span class="p">(</span><span class="s2">&quot;Cheese&quot;</span><span class="p">,</span> <span class="s2">&quot;prd06&quot;</span><span class="p">,</span> <span class="mf">4.99</span><span class="p">,</span> <span class="s2">&quot;Dairy&quot;</span><span class="p">)</span>
+    <span class="p">];</span>
+
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Store</span><span class="p">(</span><span class="nx">manager</span><span class="p">,</span> <span class="nx">products</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">constructStore</span><span class="p">();</span>
+<span class="nx">store</span><span class="p">.</span><span class="nx">logIt</span><span class="p">();</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#jsonText&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">json</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="75ca1891-27ef-4c9c-b066-8efbe6f3079d"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#75ca1891-27ef-4c9c-b066-8efbe6f3079d');
+console.log("Store object");
+
+class Product {
+  constructor(name, id, price, category="Misc") {
+    this.name = name;
+    this.id = id;
+    this.price = price;
+    this.category = category;
+  }
+
+  setCategory(category) {
+    this.category = category;
+  }
+
+  getJSON() {
+    const obj = {type: typeof this, name: this.name, id: this.id, price: this.price, category: this.category};
+    const json = JSON.stringify(obj);
+    return json;
+  }
+
+  logIt() {
+    console.info(this);
+    element.append("Product json <br>");
+    element.append(this.getJSON() + "<br>");  
+  }
+}
+
+class Store {
+  constructor(manager, products) {
+    this.manager = manager;
+    this.products = products;
+    this.store = [manager, ...products];
+    this.json = '{"store":[' + this.store.map(product => product.getJSON()) + ']}';
+  }
+
+  logIt() {
+    console.log(this);
+    element.append("Store object in JSON<br>");
+    element.append(this.json + "<br>");  
+  }
+}
+
+function constructStore() {
+    const manager = new Product("Mr M", "mgr01", 0, "Manager");
+
+    const products = [ 
+        new Product("Apple", "prd01", 1.99, "Fruits"),
+        new Product("Banana", "prd02", 0.99, "Fruits"),
+        new Product("Tomato", "prd03", 2.99, "Vegetables"),
+        new Product("Potato", "prd04", 1.49, "Vegetables"),
+        new Product("Milk", "prd05", 3.49, "Dairy"),
+        new Product("Cheese", "prd06", 4.99, "Dairy")
+    ];
+
+    return new Store(manager, products);
+}
+
+const store = constructStore();
+store.logIt();
+$('#jsonText').text(store.json);
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Explaination">Explaination<a class="anchor-link" href="#Explaination"> </a></h1><div class="highlight"><pre><span></span><span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">price</span><span class="p">,</span> <span class="nx">category</span><span class="o">=</span><span class="s2">&quot;Misc&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">price</span> <span class="o">=</span> <span class="nx">price</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">category</span> <span class="o">=</span> <span class="nx">category</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></div>
+<ul>
+<li>Constructor: This is a special method for creating and initializing an object created with a class. There can only be one special method with the name "constructor" in a class. A constructor can use the super keyword to call the constructor of the super class.</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nx">setCategory</span><span class="p">(</span><span class="nx">category</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">category</span> <span class="o">=</span> <span class="nx">category</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">getJSON</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="k">typeof</span> <span class="k">this</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">id</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">price</span><span class="p">,</span> <span class="nx">category</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">category</span><span class="p">};</span>
+    <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></div>
+<ul>
+<li>Getter and Setter Methods: JavaScript Getters and Setters are used to effectively protect your data, particularly when creating classes. The getter method returns the value of the variable to which it is bound. The setter method sets the value of the variable.</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
 
 
