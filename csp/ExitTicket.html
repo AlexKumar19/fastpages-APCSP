@@ -145,6 +145,13 @@ Menu:
 1. Sort in ascending order
 2. Sort in descending order
 3. Exit
+Invalid choice. Please enter a number from 1 to 3.
+Invalid input. Please enter a number.
+Sorted list (ascending order): [1, 1, 2, 2, 3, 3, 4]
+Menu:
+1. Sort in ascending order
+2. Sort in descending order
+3. Exit
 Exiting the program. Goodbye!
 </pre>
 </div>
@@ -184,8 +191,6 @@ Exiting the program. Goodbye!
                 <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">len</span> <span class="o">-</span> <span class="nx">i</span> <span class="o">-</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
                     <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mf">1</span><span class="p">])</span> <span class="p">{</span>
                         <span class="c1">// Swap</span>
-                        <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
-                        <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mf">1</span><span class="p">];</span>
                         <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
                     <span class="p">}</span>
                 <span class="p">}</span>
@@ -242,8 +247,6 @@ Exiting the program. Goodbye!
                 for (var j = 0; j < len - i - 1; j++) {
                     if (arr[j] > arr[j + 1]) {
                         // Swap
-                        var temp = arr[j];
-                        arr[j] = arr[j + 1];
                         arr[j + 1] = temp;
                     }
                 }
@@ -507,10 +510,10 @@ Exiting the program. Goodbye!
 
 
 
-<div id="22623ec3-9879-40fe-b4dc-84036d1d284a"></div>
+<div id="8267cec9-b01f-4ad5-87a5-5c16b98e0f77"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#22623ec3-9879-40fe-b4dc-84036d1d284a');
+var element = $('#8267cec9-b01f-4ad5-87a5-5c16b98e0f77');
 console.log("Store object");
 
 class Product {
